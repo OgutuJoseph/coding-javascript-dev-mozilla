@@ -7,9 +7,12 @@ dotenv.config();
 app.use(express.json());
 
 /** routes */
-// app.use('/arrays', require('./routes/arrays'));
+// app.use('/built-in-objects/array', require('./routes/built-in-objects/array'));
+const routes = require('./routes');
 
 const port = process.env.PORT;
+
+app.use(routes);
 
 app.listen(port, () => {
     console.log(`Server has started on port: ${port}`)
