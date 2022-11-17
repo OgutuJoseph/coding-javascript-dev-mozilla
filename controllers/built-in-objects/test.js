@@ -1,7 +1,7 @@
 /** controller methods */
 
 // test join -- Generic array methods
-const genrericArrayMethods = async (req, res) => {
+const joinTest = async (req, res) => {
     const arrayLike = {
         0: "a",
         1: "b",
@@ -14,7 +14,7 @@ const genrericArrayMethods = async (req, res) => {
 };
 
 // test group
-const test = async (req, res) => {
+const groupTest = async (req, res) => {
     const inventory = [
         { name: 'asparagus', type: 'vegetables' },
         { name: 'bananas', type: 'fruit' },
@@ -29,6 +29,6 @@ const test = async (req, res) => {
 };
 
 module.exports = {
-    genrericArrayMethods,
-    test
+    joinTest,
+    groupTest
 }
