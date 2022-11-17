@@ -1,6 +1,4 @@
 /** ###############----############### array properties ###############----############### */
-
-
 /** 1. get Array[@@species] */
 const species = (req, res) => {
     class NotAnArray {
@@ -114,6 +112,7 @@ const nonWritableArray = (req, res) => {
     // numbers.push(5); // // TypeError: Cannot assign to read only property 'length' of object '[object Array]'
     res.status(200).json(numbers);
 };
+
 
 
 /** ###############----############### array methods ###############----############### */
