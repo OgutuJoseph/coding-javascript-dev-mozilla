@@ -110,7 +110,28 @@ const nonWritableArray = (req, res) => {
 
 
 /** ###############----############### array methods ###############----############### */
+/** [@@iterator] */
+const iterator = (req, res) => {
+    /** client side scripting */
+    // const arr = ["a", "b", "c"];
+    // const letterResult = document.getElementById("letterResult");
+    // for (const letter of arr) {
+    //     const li = document.createElement("li");
+    //     li.textContent = letter;
+    //     letterResult.appendChild(li);
+    // };
 
+    // console.log('letterResult: ', letterResult);
+
+    const arr = ["a", "b", "c", "d", "e"];
+    const arrIter = arr[Symbol.iterator]();
+    console.log('a: ', arrIter.next().value); // a
+    console.log('b: ', arrIter.next().value); // b
+    console.log('c: ', arrIter.next().value); // c
+    console.log('d: ', arrIter.next().value); // d
+    console.log('e: ', arrIter.next().value); // e
+    console.log('f: ', arrIter.next().value); // f --> undefines
+};
 
 module.exports = {
     species,
@@ -119,5 +140,6 @@ module.exports = {
     iterateArray,
     shortenArray,
     fixedLengthArray,
-    nonWritableArray
+    nonWritableArray,
+    iterator
 }
