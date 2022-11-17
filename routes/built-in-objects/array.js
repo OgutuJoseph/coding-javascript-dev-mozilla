@@ -1,10 +1,9 @@
 const router = require('express').Router();
 const { 
-    genrericArrayMethods,
-    test
+    species
 } = require('../../controllers/built-in-objects/array');
 
-router.get('/genericArrayMethods', genrericArrayMethods);
-router.get('/test', test);
+router.get('/species', species);
+router.get('/test', );
 
 module.exports = router;

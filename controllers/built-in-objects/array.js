@@ -1,34 +1,28 @@
-/** controller methods */
+/** ###############----############### array properties ###############----############### */
 
-// test join -- Generic array methods
-const genrericArrayMethods = async (req, res) => {
-    const arrayLike = {
-        0: "a",
-        1: "b",
-        length: 2,
+
+/** 1. get Array[@@species] */
+const species = (req, res) => {
+    class NotAnArray {
+        constructor(length) {
+            this.length = length;
+        }
     };
-    // console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b
-    const result = Array.prototype.join.call(arrayLike, '+');
 
-    res.status(200).json(result);
+    const arr = [0, 1, 2];
+    const arr1 = [12, 25, 36];
+    arr.constructor = { [Symbol.species]: NotAnArray };
+
+    const mapResult = arr.map((i) => i);
+    const filterResult = arr.filter((i) => i);
+    const concatResult = arr.concat([1, 2]);
+    res.status(200).json(concatResult);
 };
 
-// test group
-const test = async (req, res) => {
-    const inventory = [
-        { name: 'asparagus', type: 'vegetables' },
-        { name: 'bananas', type: 'fruit' },
-        { name: 'goat', type: 'meat' },
-        { name: 'cherries', type: 'fruit' },
-        { name: 'fish', type: 'meat' },
-    ];
-    // const result = inventory.group(({ type }) => type);
-    // const result = inventory;
-    // console.log('result veg: ', result)
-    res.status(200).json(inventory);
-};
+
+/** ###############----############### array methods ###############----############### */
+
 
 module.exports = {
-    genrericArrayMethods,
-    test
+    species
 }
