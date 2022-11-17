@@ -110,9 +110,9 @@ const nonWritableArray = (req, res) => {
 
 
 /** ###############----############### array methods ###############----############### */
-/** [@@iterator] */
+/** 1. [@@iterator] */
 const iterator = (req, res) => {
-    /** client side scripting */
+    /** Iteration using for...of loop <--/> client side scripting */
     // const arr = ["a", "b", "c"];
     // const letterResult = document.getElementById("letterResult");
     // for (const letter of arr) {
@@ -123,6 +123,7 @@ const iterator = (req, res) => {
 
     // console.log('letterResult: ', letterResult);
 
+    /** Manually hand-rolling the iterator */
     const arr = ["a", "b", "c", "d", "e"];
     const arrIter = arr[Symbol.iterator]();
     console.log('a: ', arrIter.next().value); // a
@@ -133,6 +134,63 @@ const iterator = (req, res) => {
     console.log('f: ', arrIter.next().value); // f --> undefines
 };
 
+/** 2. at() */
+/** **2.1 desc** */
+const atDesc = (req, res) => {
+    const array1 = [5, 12, 8, 130, 44];
+
+    let index = 2;
+    console.log(`Using an index of ${index} the item returned is ${array1.at(index)}`);
+
+    index = -2;
+    console.log(`Using an index of ${index} item returned is ${array1.at(index)}`);
+};
+/** **2.2 return last value of an array** */
+const atReturnLastValue = (req, res) => {
+    // Array with items
+    const cart = ['apple', 'banana', 'pear'];
+
+    // A function which returns the last item of a given array
+    function returnLast(arr) {
+        return arr.at(-1);
+    }
+
+    // Get the last item of our array 'cart'
+    const item1 = returnLast(cart);
+    console.log('last item 1: ', item1); 
+
+    // Add an item to our 'cart' array
+    cart.push('orange');
+    const item2 = returnLast(cart);
+    console.log('last item 2: ', item2); 
+};
+/** **2.3 different ways to select the penultimate (last but one) item of an Array** */
+const atCompareMethods = (req, res) => {
+    // Array with items
+    const colors = ['red', 'green', 'blue', 'çolor4', 'color5'];
+
+    // Using length property
+    const lengthWay = colors[colors.length-2];
+    console.log('using length: ', lengthWay); 
+
+    // Using slice() method. Note an array is returned
+    const sliceWay = colors.slice(-2, -1);
+    console.log('using slice: ',sliceWay);
+
+    // Using at() method
+    const atWay = colors.at(-3);
+    console.log('using at: ',atWay); 
+};
+/** **2.4 Calling at() on non-array objects** */
+const atOnNonArrays = (req, res) => {
+    const arrayLike = {
+        length: 2,
+        0: "a",
+        1: "b",
+    };
+    console.log(Array.prototype.at.call(arrayLike, -1));
+};
+
 module.exports = {
     species,
     unscoppables,
@@ -141,5 +199,9 @@ module.exports = {
     shortenArray,
     fixedLengthArray,
     nonWritableArray,
-    iterator
+    iterator,
+    atDesc,
+    atReturnLastValue,
+    atCompareMethods,
+    atOnNonArrays
 }
