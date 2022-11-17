@@ -76,7 +76,7 @@ const iterateArray = (req, res) => {
     };
     res.status(200).json(numbers);
 };
-/** **3.2 shorten array** */
+/** **3.3 shorten array** */
 const shortenArray = (req, res) => {
     // shorten the array numbers to a length of 3 if the current length is greater than 3
     const numbers = [1, 2, 3, 4, 5];
@@ -88,7 +88,7 @@ const shortenArray = (req, res) => {
     console.log(numbers[3]); // undefined; the extra elements are deleted
     res.status(200).json(numbers);
 };
-/** **3.3 create empty array of fixed length** */
+/** **3.4 create empty array of fixed length** */
 const fixedLengthArray = (req, res) => {
     const numbers = [];
     numbers.length = 3;
@@ -96,7 +96,7 @@ const fixedLengthArray = (req, res) => {
     // console.log('numbers: ', numbers)
     res.status(200).json(numbers);
 };
-/** **3.3 array with non-writable length** */
+/** **3.5 array with non-writable length** */
 const nonWritableArray = (req, res) => {
     "use strict";
 
