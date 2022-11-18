@@ -3,7 +3,7 @@ const { species, lengthDesc, iterateArray, shortenArray, fixedLengthArray, nonWr
 const { iterator } = require('../../controllers/built-in-objects/array/1.iterator');
 const { atDesc, atReturnLastValue, atCompareMethods, atOnNonArrays } = require('../../controllers/built-in-objects/array/2.at()');
 const { concatDesc, concatTwo, concatThree, concatValuesTo, concatNestedArrays, concatSpreadable, concatSparseArrays, concatNonArrays } = require('../../controllers/built-in-objects/array/3.concat()')
-const { copyWihtinDesc } = require('../../controllers/built-in-objects/array/4.copyWithin()')
+const { copyWithinDesc, copyWithinUse, copyWithinOnSparse, copyWithinOnNonArrays } = require('../../controllers/built-in-objects/array/4.copyWithin()')
 
 /** properties */
 router.get('/species', species);
@@ -31,6 +31,9 @@ router.get('/concatSpreadable', concatSpreadable);
 router.get('/concatSparseArrays', concatSparseArrays);
 router.get('/concatNonArrays', concatNonArrays);
 /** ** copyWihtin() */
-router.get('/copyWihtinDesc', copyWihtinDesc);
+router.get('/copyWithinDesc', copyWithinDesc);
+router.get('/copyWithinUse', copyWithinUse);
+router.get('/copyWithinOnSparse', copyWithinOnSparse);
+router.get('/copyWithinOnNonArrays', copyWithinOnNonArrays);
 
 module.exports = router;
