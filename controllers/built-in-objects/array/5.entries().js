@@ -1,4 +1,4 @@
-/** ********** array methods - 4. copyWihtin() ********** */
+/** ********** array methods - 5. entries() ********** */
 /**
     Syntax
     entries()
@@ -90,7 +90,6 @@ const entriesWithNonArrays = (req, res) => {
     };
     let values = [];
     for (const entry of Array.prototype.entries.call(arrayLike)) {
-        // console.log(entry);
         values.push(entry);
     };
 
