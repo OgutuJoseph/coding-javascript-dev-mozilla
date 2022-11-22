@@ -6,6 +6,7 @@ const { concatDesc, concatTwo, concatThree, concatValuesTo, concatNestedArrays, 
 const { copyWithinDesc, copyWithinUse, copyWithinOnSparse, copyWithinOnNonArrays } = require('../../controllers/built-in-objects/array/4.copyWithin()');
 const { entriesDesc, entriesWithIndexAndElement, entriesWithFor_Of_Loop, entriesWithSparseArrays, entriesWithNonArrays } = require('../../controllers/built-in-objects/array/5.entries()');
 const { everyDesc, everyToTestAllElements, everyToTestArray, everyOnSparseArrays, everyToModifyArray, everyToAppendArray, everyToDeleteArray, everyOnNonArrays } = require('../../controllers/built-in-objects/array/6.every()');
+const { fillDesc, fillUse, fillForMatrixOfAllOne, fillForEmptArray, fillOnNonArrays } = require('../../controllers/built-in-objects/array/7.fill()');
 
 /** properties */
 router.get('/species', species);
@@ -52,5 +53,11 @@ router.get('/everyToModifyArray', everyToModifyArray);
 router.get('/everyToAppendArray', everyToAppendArray);
 router.get('/everyToDeleteArray', everyToDeleteArray);
 router.get('/everyOnNonArrays', everyOnNonArrays);
+/** fill() */
+router.get('/fillDesc', fillDesc);
+router.get('/fillUse', fillUse);
+router.get('/fillForMatrixOfAllOne', fillForMatrixOfAllOne);
+router.get('/fillForEmptArray', fillForEmptArray);
+router.get('/fillOnNonArrays', fillOnNonArrays);
 
 module.exports = router;
