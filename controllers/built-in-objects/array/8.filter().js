@@ -193,7 +193,7 @@ const filterToAppendArray = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.9 affecting initial array (deleting)** */
+/** **4.10 affecting initial array (deleting)** */
 const filterToDeleteArray = (req, res) => {
     words = ["spray", "limit", "exuberant", "destruction", "present"];
 
