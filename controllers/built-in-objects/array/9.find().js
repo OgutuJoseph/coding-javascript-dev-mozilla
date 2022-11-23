@@ -1,7 +1,7 @@
 /** ********** array methods - 9. find() ********** */
 /**
     Syntax
-  // Arrow function
+    // Arrow function
     find((element) => { ... })
     find((element, index) => { ... })
     find((element, index, array) => { ... })

@@ -9,6 +9,8 @@ const { everyDesc, everyToTestAllElements, everyToTestArray, everyOnSparseArrays
 const { fillDesc, fillUse, fillForMatrixOfAllOne, fillForEmptArray, fillOnNonArrays } = require('../../controllers/built-in-objects/array/7.fill()');
 const { filterDesc, filterSmallValues, flterPrimeNumbers, filterInvalidEntries, filterSearchInArray, filterOnSparseArrays, filterOnNonArrays, filterToModifyArray, filterToAppendArray, filterToDeleteArray } = require('../../controllers/built-in-objects/array/8.filter()');
 const { findDesc, findByProperties, findUsingArrowFunction, findAPrimeNumber, findOnSparseArrays, findOnNonArrays } = require('../../controllers/built-in-objects/array/9.find()');
+const { findIndexDesc, findIndexOfPrimeNumber, findIndexOnSparseArrays, findIndexOnNonArrays } = require('../../controllers/built-in-objects/array/10.findIndex()');
+const { findLastDesc } = require('../../controllers/built-in-objects/array/11.findLast()');
 
 /** properties */
 router.get('/species', species);
@@ -79,5 +81,12 @@ router.get('/findUsingArrowFunction', findUsingArrowFunction);
 router.get('/findAPrimeNumber', findAPrimeNumber);
 router.get('/findOnSparseArrays', findOnSparseArrays);
 router.get('/findOnNonArrays', findOnNonArrays);
+/** findIndex() */
+router.get('/findIndexDesc', findIndexDesc);
+router.get('/findIndexOfPrimeNumber', findIndexOfPrimeNumber);
+router.get('/findIndexOnSparseArrays', findIndexOnSparseArrays);
+router.get('/findIndexOnNonArrays', findIndexOnNonArrays)
+/** findLast() */
+router.get('/findLastDesc', findLastDesc)
 
 module.exports = router;
