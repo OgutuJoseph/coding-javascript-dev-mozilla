@@ -139,7 +139,7 @@ const everyToAppendArray = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.7 affecting inital array (appending)** */
+/** **4.7 affecting inital array (deleting)** */
 const everyToDeleteArray = (req, res) => {
     let arr = [1, 2, 3, 4];
     let arr2 = [1, 2, 3, 4, 5, 6];
