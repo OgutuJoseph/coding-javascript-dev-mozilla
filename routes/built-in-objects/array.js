@@ -7,6 +7,7 @@ const { copyWithinDesc, copyWithinUse, copyWithinOnSparse, copyWithinOnNonArrays
 const { entriesDesc, entriesWithIndexAndElement, entriesWithFor_Of_Loop, entriesWithSparseArrays, entriesWithNonArrays } = require('../../controllers/built-in-objects/array/5.entries()');
 const { everyDesc, everyToTestAllElements, everyToTestArray, everyOnSparseArrays, everyToModifyArray, everyToAppendArray, everyToDeleteArray, everyOnNonArrays } = require('../../controllers/built-in-objects/array/6.every()');
 const { fillDesc, fillUse, fillForMatrixOfAllOne, fillForEmptArray, fillOnNonArrays } = require('../../controllers/built-in-objects/array/7.fill()');
+const { filterDesc, filterSmallValues, flterPrimeNumbers, filterInvalidEntries, filterSearchInArray, filterOnSparseArrays, filterOnNonArrays, filterToModifyArray, filterToAppendArray, filterToDeleteArray } = require('../../controllers/built-in-objects/array/8.filter()');
 
 /** properties */
 router.get('/species', species);
@@ -59,5 +60,16 @@ router.get('/fillUse', fillUse);
 router.get('/fillForMatrixOfAllOne', fillForMatrixOfAllOne);
 router.get('/fillForEmptArray', fillForEmptArray);
 router.get('/fillOnNonArrays', fillOnNonArrays);
+/** filter() */
+router.get('/filterDesc', filterDesc);
+router.get('/filterSmallValues', filterSmallValues);
+router.get('/flterPrimeNumbers', flterPrimeNumbers);
+router.get('/filterInvalidEntries', filterInvalidEntries);
+router.get('/filterSearchInArray', filterSearchInArray);
+router.get('/filterOnSparseArrays', filterOnSparseArrays);
+router.get('/filterOnNonArrays', filterOnNonArrays);
+router.get('/filterToModifyArray', filterToModifyArray);
+router.get('/filterToAppendArray', filterToAppendArray);
+router.get('/filterToDeleteArray', filterToDeleteArray);
 
 module.exports = router;
