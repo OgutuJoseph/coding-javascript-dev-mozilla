@@ -8,7 +8,7 @@ const { entriesDesc, entriesWithIndexAndElement, entriesWithFor_Of_Loop, entries
 const { everyDesc, everyToTestAllElements, everyToTestArray, everyOnSparseArrays, everyToModifyArray, everyToAppendArray, everyToDeleteArray, everyOnNonArrays } = require('../../controllers/built-in-objects/array/6.every()');
 const { fillDesc, fillUse, fillForMatrixOfAllOne, fillForEmptArray, fillOnNonArrays } = require('../../controllers/built-in-objects/array/7.fill()');
 const { filterDesc, filterSmallValues, flterPrimeNumbers, filterInvalidEntries, filterSearchInArray, filterOnSparseArrays, filterOnNonArrays, filterToModifyArray, filterToAppendArray, filterToDeleteArray } = require('../../controllers/built-in-objects/array/8.filter()');
-const { findDesc, findByProperties, findUsingArrowFunction, findAPrimeNumber, findOnSparseArrays, findOnNonArrays } = require('../../controllers/built-in-objects/array/09.find()');
+const { findDesc, findByProperties, findUsingArrowFunction, findAPrimeNumber, findOnSparseArrays, findOnNonArrays } = require('../../controllers/built-in-objects/array/9.find()');
 
 /** properties */
 router.get('/species', species);
