@@ -13,6 +13,7 @@ const { findIndexDesc, findIndexOfPrimeNumber, findIndexOnSparseArrays, findInde
 const { findLastDesc, findLastMatchingProperty, findLastUsingArrowFunction, findLastPrimeNumber, findLastOnSparseArrays, findLastOnNonArrays } = require('../../controllers/built-in-objects/array/11.findLast()');
 const { findLastIndexDesc, findLastIndexOfPrime, findLastIndexOnSparseArrays, findLastIndexOnNonArrays } = require('../../controllers/built-in-objects/array/12.findLastIndex()');
 const { flatDesc, flatOnNestedArrays, flatOnSparseArrays, flatOnNonArrays } = require('../../controllers/built-in-objects/array/13.flat()');
+const { flatMapDesc, flatMapExplicitIterate, flatMapComparison, flatMapOnSentences, flatMapToAddAndRemove, flatMapOnSparseArrays, flatMapOnNonArrays } = require('../../controllers/built-in-objects/array/14.flatMap()');
 
 /** properties */
 router.get('/species', species);
@@ -105,5 +106,13 @@ router.get('/flatDesc', flatDesc);
 router.get('/flatOnNestedArrays', flatOnNestedArrays);
 router.get('/flatOnSparseArrays', flatOnSparseArrays);
 router.get('/flatOnNonArrays', flatOnNonArrays);
+/** flatMap() */
+router.get('/flatMapDesc', flatMapDesc);
+router.get('/flatMapExplicitIterate', flatMapExplicitIterate);
+router.get('/flatMapComparison', flatMapComparison);
+router.get('/flatMapOnSentences', flatMapOnSentences);
+router.get('/flatMapToAddAndRemove', flatMapToAddAndRemove);
+router.get('/flatMapOnSparseArrays', flatMapOnSparseArrays);
+router.get('/flatMapOnNonArrays', flatMapOnNonArrays);
 
 module.exports = router;
