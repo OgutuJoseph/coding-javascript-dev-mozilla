@@ -59,7 +59,7 @@ const copyWithinUse = (req, res) => {
         array3,
         array4
     };
-    res.status(200).json(result)
+    res.status(200).json(result);
 };
 
 /** **4.3 using copyWithin() on sparse arrays** */
@@ -70,7 +70,7 @@ const copyWithinOnSparse = (req, res) => {
     const result = {
         array
     };
-    res.status(200).json(result)
+    res.status(200).json(result);
 };
 
 /** **4.4 calling copyWithin() on non-array objects** */
@@ -92,7 +92,7 @@ const copyWithinOnNonArrays = (req, res) => {
         array1,
         array2
     };
-    res.status(200).json(result)
+    res.status(200).json(result);
 };
 
 module.exports = {
