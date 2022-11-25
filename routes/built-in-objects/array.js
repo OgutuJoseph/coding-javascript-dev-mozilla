@@ -10,7 +10,10 @@ const { fillDesc, fillUse, fillForMatrixOfAllOne, fillForEmptArray, fillOnNonArr
 const { filterDesc, filterSmallValues, flterPrimeNumbers, filterInvalidEntries, filterSearchInArray, filterOnSparseArrays, filterOnNonArrays, filterToModifyArray, filterToAppendArray, filterToDeleteArray } = require('../../controllers/built-in-objects/array/8.filter()');
 const { findDesc, findByProperties, findUsingArrowFunction, findAPrimeNumber, findOnSparseArrays, findOnNonArrays } = require('../../controllers/built-in-objects/array/9.find()');
 const { findIndexDesc, findIndexOfPrimeNumber, findIndexOnSparseArrays, findIndexOnNonArrays } = require('../../controllers/built-in-objects/array/10.findIndex()');
-const { findLastDesc } = require('../../controllers/built-in-objects/array/11.findLast()');
+const { findLastDesc, findLastMatchingProperty, findLastUsingArrowFunction, findLastPrimeNumber, findLastOnSparseArrays, findLastOnNonArrays } = require('../../controllers/built-in-objects/array/11.findLast()');
+const { findLastIndexDesc, findLastIndexOfPrime, findLastIndexOnSparseArrays, findLastIndexOnNonArrays } = require('../../controllers/built-in-objects/array/12.findLastIndex()');
+const { flatDesc, flatOnNestedArrays, flatOnSparseArrays, flatOnNonArrays } = require('../../controllers/built-in-objects/array/13.flat()');
+const { flatMapDesc, flatMapExplicitIterate, flatMapComparison, flatMapOnSentences, flatMapToAddAndRemove, flatMapOnSparseArrays, flatMapOnNonArrays } = require('../../controllers/built-in-objects/array/14.flatMap()');
 
 /** properties */
 router.get('/species', species);
@@ -87,6 +90,29 @@ router.get('/findIndexOfPrimeNumber', findIndexOfPrimeNumber);
 router.get('/findIndexOnSparseArrays', findIndexOnSparseArrays);
 router.get('/findIndexOnNonArrays', findIndexOnNonArrays)
 /** findLast() */
-router.get('/findLastDesc', findLastDesc)
+router.get('/findLastDesc', findLastDesc);
+router.get('/findLastMatchingProperty', findLastMatchingProperty);
+router.get('/findLastUsingArrowFunction', findLastUsingArrowFunction);
+router.get('/findLastPrimeNumber', findLastPrimeNumber);
+router.get('/findLastOnSparseArrays', findLastOnSparseArrays);
+router.get('/findLastOnNonArrays', findLastOnNonArrays);
+/** findLastIndex() */
+router.get('/findLastIndexDesc', findLastIndexDesc);
+router.get('/findLastIndexOfPrime', findLastIndexOfPrime);
+router.get('/findLastIndexOnSparseArrays', findLastIndexOnSparseArrays);
+router.get('/findLastIndexOnNonArrays', findLastIndexOnNonArrays);
+/** flat() */
+router.get('/flatDesc', flatDesc);
+router.get('/flatOnNestedArrays', flatOnNestedArrays);
+router.get('/flatOnSparseArrays', flatOnSparseArrays);
+router.get('/flatOnNonArrays', flatOnNonArrays);
+/** flatMap() */
+router.get('/flatMapDesc', flatMapDesc);
+router.get('/flatMapExplicitIterate', flatMapExplicitIterate);
+router.get('/flatMapComparison', flatMapComparison);
+router.get('/flatMapOnSentences', flatMapOnSentences);
+router.get('/flatMapToAddAndRemove', flatMapToAddAndRemove);
+router.get('/flatMapOnSparseArrays', flatMapOnSparseArrays);
+router.get('/flatMapOnNonArrays', flatMapOnNonArrays);
 
 module.exports = router;
