@@ -88,7 +88,7 @@ const flatOnNonArrays = (req, res) => {
     const result = Array.prototype.flat.call(arrayLike);
 
     res.status(200).json(result);
-}
+};
 
 module.exports = {
     flatDesc,
