@@ -15,6 +15,7 @@ const { findLastIndexDesc, findLastIndexOfPrime, findLastIndexOnSparseArrays, fi
 const { flatDesc, flatOnNestedArrays, flatOnSparseArrays, flatOnNonArrays } = require('../../controllers/built-in-objects/array/13.flat()');
 const { flatMapDesc, flatMapExplicitIterate, flatMapComparison, flatMapOnSentences, flatMapToAddAndRemove, flatMapOnSparseArrays, flatMapOnNonArrays } = require('../../controllers/built-in-objects/array/14.flatMap()');
 const { forEachDesc, forEachSyncDesc, forEachOnSparseArrays, forEachFromForLoop, forEachToPrint, forEachUsingThisArg, forEachToCopyObject, forEachToModifyArray, forEachToFlattenArray, forEachOnNonArrays } = require('../../controllers/built-in-objects/array/15.forEach()');
+const { fromDesc, fromString, fromSet, fromMap, fromArrayLikeObjects, fromArrayFunctionsAndArray_From, fromUsingSequenceGenerator, fromUsingNonArrayConstructors } = require('../../controllers/built-in-objects/array/16.from()');
 
 /** properties */
 router.get('/species', species);
@@ -126,5 +127,14 @@ router.get('/forEachToCopyObject', forEachToCopyObject);
 router.get('/forEachToModifyArray', forEachToModifyArray);
 router.get('/forEachToFlattenArray', forEachToFlattenArray);
 router.get('/forEachOnNonArrays', forEachOnNonArrays);
+/** from() */
+router.get('/fromDesc', fromDesc);
+router.get('/fromString', fromString);
+router.get('/fromSet', fromSet);
+router.get('/fromMap', fromMap);
+router.get('/fromArrayLikeObjects', fromArrayLikeObjects);
+router.get('/fromArrayFunctionsAndArray_From', fromArrayFunctionsAndArray_From);
+router.get('/fromUsingSequenceGenerator', fromUsingSequenceGenerator);
+router.get('/fromUsingNonArrayConstructors', fromUsingNonArrayConstructors);
 
 module.exports = router;
