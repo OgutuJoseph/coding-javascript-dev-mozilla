@@ -136,5 +136,10 @@ router.get('/fromArrayLikeObjects', fromArrayLikeObjects);
 router.get('/fromArrayFunctionsAndArray_From', fromArrayFunctionsAndArray_From);
 router.get('/fromUsingSequenceGenerator', fromUsingSequenceGenerator);
 router.get('/fromUsingNonArrayConstructors', fromUsingNonArrayConstructors);
+/** group() */
+
+/** groupToMap */
+
+/** */
 
 module.exports = router;
