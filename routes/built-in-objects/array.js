@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { Router } = require('express');
 const { species, lengthDesc, iterateArray, shortenArray, fixedLengthArray, nonWritableArray } = require('../../controllers/built-in-objects/array/0.properties');
 const { iterator } = require('../../controllers/built-in-objects/array/01.iterator');
 const { atDesc, atReturnLastValue, atCompareMethods, atOnNonArrays } = require('../../controllers/built-in-objects/array/02.at()');
@@ -22,6 +23,7 @@ const { isArrayDesc } = require('../../controllers/built-in-objects/array/21.isA
 const { joinDesc, joinOnSparseArrays, joinOnNonArrays } = require('../../controllers/built-in-objects/array/22.join()');
 const { keysDesc, keysOnSparseArrays, keysOnNonArrays } = require('../../controllers/built-in-objects/array/23.keys()');
 const { lastIndexOfDesc, lastIndexOfUses, lastIndexOfAllOccurrences, lastIndexOfOnSparseArrays, lastIndexOfOnNonArrays } = require('../../controllers/built-in-objects/array/24.lastIndexOf()');
+const { mapDesc, mapOnSquareRoots, mapToReformatObjects, mapUsingFunctionWithArg, mapOnNonArrays, mapOnSparseArrays, mapWithParseInt, mapWithUndefineds } = require('../../controllers/built-in-objects/array/25.map()');
 
 /** properties */
 router.get('/species', species);
@@ -176,5 +178,14 @@ router.get('/lastIndexOfUses', lastIndexOfUses);
 router.get('/lastIndexOfAllOccurrences', lastIndexOfAllOccurrences);
 router.get('/lastIndexOfOnSparseArrays', lastIndexOfOnSparseArrays);
 router.get('/lastIndexOfOnNonArrays', lastIndexOfOnNonArrays);
+/** map() */
+router.get('/mapDesc', mapDesc);
+router.get('/mapOnSquareRoots', mapOnSquareRoots);
+router.get('/mapToReformatObjects', mapToReformatObjects);
+router.get('/mapUsingFunctionWithArg', mapUsingFunctionWithArg);
+router.get('/mapOnNonArrays', mapOnNonArrays);
+router.get('/mapOnSparseArrays', mapOnSparseArrays);
+router.get('/mapWithParseInt', mapWithParseInt);
+router.get('/mapWithUndefineds', mapWithUndefineds);
 
 module.exports = router;
