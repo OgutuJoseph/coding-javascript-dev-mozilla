@@ -18,6 +18,7 @@ const { forEachDesc, forEachSyncDesc, forEachOnSparseArrays, forEachFromForLoop,
 const { fromDesc, fromString, fromSet, fromMap, fromArrayLikeObjects, fromArrayFunctionsAndArray_From, fromUsingSequenceGenerator, fromUsingNonArrayConstructors } = require('../../controllers/built-in-objects/array/16.from()');
 const { includesDesc, includesUses, includesWithGreaterFromIndex, includesWithComputedIndexLessThanZero, includesOnSparseArrays, includesOnNonArrays } = require('../../controllers/built-in-objects/array/19.includes()');
 const { indexOfDesc, indexOfUses, indexOfAllOccurrences, indexOfCheckIfElementExists, indexOfOnSparseArrays, indexOfOnNonArrays } = require('../../controllers/built-in-objects/array/20.indexOf()');
+const { isArrayDesc } = require('../../controllers/built-in-objects/array/21.isArray()');
 
 /** properties */
 router.get('/species', species);
@@ -156,5 +157,7 @@ router.get('/indexOfAllOccurrences', indexOfAllOccurrences);
 router.get('/indexOfCheckIfElementExists', indexOfCheckIfElementExists);
 router.get('/indexOfOnSparseArrays', indexOfOnSparseArrays);
 router.get('/indexOfOnNonArrays', indexOfOnNonArrays);
+/** isArray() */
+router.get('/isArrayDesc', isArrayDesc);
 
 module.exports = router;
