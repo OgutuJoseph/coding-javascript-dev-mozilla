@@ -19,6 +19,7 @@ const { fromDesc, fromString, fromSet, fromMap, fromArrayLikeObjects, fromArrayF
 const { includesDesc, includesUses, includesWithGreaterFromIndex, includesWithComputedIndexLessThanZero, includesOnSparseArrays, includesOnNonArrays } = require('../../controllers/built-in-objects/array/19.includes()');
 const { indexOfDesc, indexOfUses, indexOfAllOccurrences, indexOfCheckIfElementExists, indexOfOnSparseArrays, indexOfOnNonArrays } = require('../../controllers/built-in-objects/array/20.indexOf()');
 const { isArrayDesc } = require('../../controllers/built-in-objects/array/21.isArray()');
+const { joinDesc, joinOnSparseArrays, joinOnNonArrays } = require('../../controllers/built-in-objects/array/22.join()');
 
 /** properties */
 router.get('/species', species);
@@ -159,5 +160,9 @@ router.get('/indexOfOnSparseArrays', indexOfOnSparseArrays);
 router.get('/indexOfOnNonArrays', indexOfOnNonArrays);
 /** isArray() */
 router.get('/isArrayDesc', isArrayDesc);
+/** join() */
+router.get('/joinDesc', joinDesc);
+router.get('/joinOnSparseArrays', joinOnSparseArrays);
+router.get('/joinOnNonArrays', joinOnNonArrays);
 
 module.exports = router;
