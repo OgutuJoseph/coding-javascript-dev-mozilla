@@ -17,6 +17,11 @@ const { flatMapDesc, flatMapExplicitIterate, flatMapComparison, flatMapOnSentenc
 const { forEachDesc, forEachSyncDesc, forEachOnSparseArrays, forEachFromForLoop, forEachToPrint, forEachUsingThisArg, forEachToCopyObject, forEachToModifyArray, forEachToFlattenArray, forEachOnNonArrays } = require('../../controllers/built-in-objects/array/15.forEach()');
 const { fromDesc, fromString, fromSet, fromMap, fromArrayLikeObjects, fromArrayFunctionsAndArray_From, fromUsingSequenceGenerator, fromUsingNonArrayConstructors } = require('../../controllers/built-in-objects/array/16.from()');
 const { includesDesc, includesUses, includesWithGreaterFromIndex, includesWithComputedIndexLessThanZero, includesOnSparseArrays, includesOnNonArrays } = require('../../controllers/built-in-objects/array/19.includes()');
+const { indexOfDesc, indexOfUses, indexOfAllOccurrences, indexOfCheckIfElementExists, indexOfOnSparseArrays, indexOfOnNonArrays } = require('../../controllers/built-in-objects/array/20.indexOf()');
+const { isArrayDesc } = require('../../controllers/built-in-objects/array/21.isArray()');
+const { joinDesc, joinOnSparseArrays, joinOnNonArrays } = require('../../controllers/built-in-objects/array/22.join()');
+const { keysDesc, keysOnSparseArrays, keysOnNonArrays } = require('../../controllers/built-in-objects/array/23.keys()');
+const { lastIndexOfDesc, lastIndexOfUses, lastIndexOfAllOccurrences, lastIndexOfOnSparseArrays, lastIndexOfOnNonArrays } = require('../../controllers/built-in-objects/array/24.lastIndexOf()');
 
 /** properties */
 router.get('/species', species);
@@ -148,5 +153,28 @@ router.get('/includesWithGreaterFromIndex', includesWithGreaterFromIndex);
 router.get('/includesWithComputedIndexLessThanZero', includesWithComputedIndexLessThanZero);
 router.get('/includesOnSparseArrays', includesOnSparseArrays);
 router.get('/includesOnNonArrays', includesOnNonArrays);
+/** indexOf() */
+router.get('/indexOfDesc', indexOfDesc);
+router.get('/indexOfUses', indexOfUses);
+router.get('/indexOfAllOccurrences', indexOfAllOccurrences);
+router.get('/indexOfCheckIfElementExists', indexOfCheckIfElementExists);
+router.get('/indexOfOnSparseArrays', indexOfOnSparseArrays);
+router.get('/indexOfOnNonArrays', indexOfOnNonArrays);
+/** isArray() */
+router.get('/isArrayDesc', isArrayDesc);
+/** join() */
+router.get('/joinDesc', joinDesc);
+router.get('/joinOnSparseArrays', joinOnSparseArrays);
+router.get('/joinOnNonArrays', joinOnNonArrays);
+/** keys() */
+router.get('/keysDesc', keysDesc);
+router.get('/keysOnSparseArrays', keysOnSparseArrays);
+router.get('/keysOnNonArrays', keysOnNonArrays);
+/** lastIndexOf() */
+router.get('/lastIndexOfDesc', lastIndexOfDesc);
+router.get('/lastIndexOfUses', lastIndexOfUses);
+router.get('/lastIndexOfAllOccurrences', lastIndexOfAllOccurrences);
+router.get('/lastIndexOfOnSparseArrays', lastIndexOfOnSparseArrays);
+router.get('/lastIndexOfOnNonArrays', lastIndexOfOnNonArrays);
 
 module.exports = router;

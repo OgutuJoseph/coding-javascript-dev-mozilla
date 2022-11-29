@@ -1,4 +1,4 @@
-/** ********** array methods - 15. forEach() ********** */
+/** ********** array methods - 19. includes() ********** */
 /**
     Syntax
     includes(searchElement)
