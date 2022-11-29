@@ -21,6 +21,7 @@ const { indexOfDesc, indexOfUses, indexOfAllOccurrences, indexOfCheckIfElementEx
 const { isArrayDesc } = require('../../controllers/built-in-objects/array/21.isArray()');
 const { joinDesc, joinOnSparseArrays, joinOnNonArrays } = require('../../controllers/built-in-objects/array/22.join()');
 const { keysDesc, keysOnSparseArrays, keysOnNonArrays } = require('../../controllers/built-in-objects/array/23.keys()');
+const { lastIndexOfDesc, lastIndexOfUses, lastIndexOfAllOccurrences, lastIndexOfOnSparseArrays, lastIndexOfOnNonArrays } = require('../../controllers/built-in-objects/array/24.lastIndexOf()');
 
 /** properties */
 router.get('/species', species);
@@ -169,5 +170,11 @@ router.get('/joinOnNonArrays', joinOnNonArrays);
 router.get('/keysDesc', keysDesc);
 router.get('/keysOnSparseArrays', keysOnSparseArrays);
 router.get('/keysOnNonArrays', keysOnNonArrays);
+/** lastIndexOf() */
+router.get('/lastIndexOfDesc', lastIndexOfDesc);
+router.get('/lastIndexOfUses', lastIndexOfUses);
+router.get('/lastIndexOfAllOccurrences', lastIndexOfAllOccurrences);
+router.get('/lastIndexOfOnSparseArrays', lastIndexOfOnSparseArrays);
+router.get('/lastIndexOfOnNonArrays', lastIndexOfOnNonArrays);
 
 module.exports = router;
