@@ -17,6 +17,7 @@ const { flatMapDesc, flatMapExplicitIterate, flatMapComparison, flatMapOnSentenc
 const { forEachDesc, forEachSyncDesc, forEachOnSparseArrays, forEachFromForLoop, forEachToPrint, forEachUsingThisArg, forEachToCopyObject, forEachToModifyArray, forEachToFlattenArray, forEachOnNonArrays } = require('../../controllers/built-in-objects/array/15.forEach()');
 const { fromDesc, fromString, fromSet, fromMap, fromArrayLikeObjects, fromArrayFunctionsAndArray_From, fromUsingSequenceGenerator, fromUsingNonArrayConstructors } = require('../../controllers/built-in-objects/array/16.from()');
 const { includesDesc, includesUses, includesWithGreaterFromIndex, includesWithComputedIndexLessThanZero, includesOnSparseArrays, includesOnNonArrays } = require('../../controllers/built-in-objects/array/19.includes()');
+const { indexOfDesc, indexOfUses, indexOfAllOccurrences, indexOfCheckIfElementExists, indexOfOnSparseArrays, indexOfOnNonArrays } = require('../../controllers/built-in-objects/array/20.indexOf()');
 
 /** properties */
 router.get('/species', species);
@@ -148,5 +149,12 @@ router.get('/includesWithGreaterFromIndex', includesWithGreaterFromIndex);
 router.get('/includesWithComputedIndexLessThanZero', includesWithComputedIndexLessThanZero);
 router.get('/includesOnSparseArrays', includesOnSparseArrays);
 router.get('/includesOnNonArrays', includesOnNonArrays);
+/** indexOf() */
+router.get('/indexOfDesc', indexOfDesc);
+router.get('/indexOfUses', indexOfUses);
+router.get('/indexOfAllOccurrences', indexOfAllOccurrences);
+router.get('/indexOfCheckIfElementExists', indexOfCheckIfElementExists);
+router.get('/indexOfOnSparseArrays', indexOfOnSparseArrays);
+router.get('/indexOfOnNonArrays', indexOfOnNonArrays);
 
 module.exports = router;
