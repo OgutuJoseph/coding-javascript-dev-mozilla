@@ -15,7 +15,7 @@
     map(function (element, index) { ... })
     map(function (element, index, array) { ... })
     map(function (element, index, array) { ... }, thisArg)
- */
+*/
 
 /** **4.1 desc** */
 const mapDesc = (req, res) => {
