@@ -41,7 +41,7 @@ const ofOnNonArrayConstructors = (req, res) => {
 
     const result = { output };
     res.status(200).json(result);
-}
+};
 
 module.exports = {
     ofDesc,
