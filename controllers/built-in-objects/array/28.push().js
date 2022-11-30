@@ -4,6 +4,7 @@
     push(element0)
     push(element0, element1)
     push(element0, element1, ... elementN)
+*/
 
 /** **4.1 desc** */
 const pushDesc = (req, res) => {
