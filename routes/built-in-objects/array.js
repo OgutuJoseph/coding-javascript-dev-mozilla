@@ -26,6 +26,7 @@ const { lastIndexOfDesc, lastIndexOfUses, lastIndexOfAllOccurrences, lastIndexOf
 const { mapDesc, mapOnSquareRoots, mapToReformatObjects, mapUsingFunctionWithArg, mapOnNonArrays, mapOnSparseArrays, mapWithParseInt, mapWithUndefineds } = require('../../controllers/built-in-objects/array/25.map()');
 const { ofDesc, ofOnNonArrayConstructors } = require('../../controllers/built-in-objects/array/26.of()');
 const { popDesc, popOnNonArrayObjects, popWithObjectInArrayLikeFashion } = require('../../controllers/built-in-objects/array/27.pop()');
+const { pushDesc, pushMergingTwoArrays, pushOnNonArrays, pushWithObjectInArrayLikeFashion } = require('../../controllers/built-in-objects/array/28.push()');
 
 /** properties */
 router.get('/species', species);
@@ -196,5 +197,10 @@ router.get('/ofOnNonArrayConstructors', ofOnNonArrayConstructors);
 router.get('/popDesc', popDesc);
 router.get('/popOnNonArrayObjects', popOnNonArrayObjects);
 router.get('/popWithObjectInArrayLikeFashion', popWithObjectInArrayLikeFashion);
+/** push() */
+router.get('/pushDesc', pushDesc);
+router.get('/pushMergingTwoArrays', pushMergingTwoArrays);
+router.get('/pushOnNonArrays', pushOnNonArrays);
+router.get('/pushWithObjectInArrayLikeFashion', pushWithObjectInArrayLikeFashion);
 
 module.exports = router;
