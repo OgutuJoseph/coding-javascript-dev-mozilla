@@ -2,6 +2,7 @@
 /**
     Syntax
     pop()
+*/
 
 /** **4.1 desc** */
 const popDesc = (req, res) => {
