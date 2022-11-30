@@ -24,6 +24,7 @@ const { joinDesc, joinOnSparseArrays, joinOnNonArrays } = require('../../control
 const { keysDesc, keysOnSparseArrays, keysOnNonArrays } = require('../../controllers/built-in-objects/array/23.keys()');
 const { lastIndexOfDesc, lastIndexOfUses, lastIndexOfAllOccurrences, lastIndexOfOnSparseArrays, lastIndexOfOnNonArrays } = require('../../controllers/built-in-objects/array/24.lastIndexOf()');
 const { mapDesc, mapOnSquareRoots, mapToReformatObjects, mapUsingFunctionWithArg, mapOnNonArrays, mapOnSparseArrays, mapWithParseInt, mapWithUndefineds } = require('../../controllers/built-in-objects/array/25.map()');
+const { ofDesc, ofOnNonArrayConstructors } = require('../../controllers/built-in-objects/array/26.of()');
 
 /** properties */
 router.get('/species', species);
@@ -187,5 +188,8 @@ router.get('/mapOnNonArrays', mapOnNonArrays);
 router.get('/mapOnSparseArrays', mapOnSparseArrays);
 router.get('/mapWithParseInt', mapWithParseInt);
 router.get('/mapWithUndefineds', mapWithUndefineds);
+/** of() */
+router.get('/ofDesc', ofDesc);
+router.get('/ofOnNonArrayConstructors', ofOnNonArrayConstructors);
 
 module.exports = router;
