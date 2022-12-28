@@ -39,6 +39,44 @@ const reduceDesc = (req, res) => {
     res.status(200).json(result);
 };
 
+/** **4.2 how reduce() works without an initial value** */
+const reduceWithoutInitial = (req, res) => {
+    const array = [15, 16, 17, 18, 19];
+
+    let outputs = [];
+    function reducer(accumulator, currentValue, index) {
+        const returns = accumulator + currentValue;
+        outputs.push(
+            `accumulator: ${accumulator}, currentValue: ${currentValue}, index: ${index}, returns: ${returns}`,
+        );
+        return returns;
+    }
+
+    const reducerResult = array.reduce(reducer);
+    const result = {
+        outputs,
+        reducerResult
+    };
+
+    res.status(200).json(result);
+};
+
+/** **4.3 how reduce() works with an initial value** */
+const reduceWithInitial = (req, res) => {
+    const testResult = [15, 16, 17, 18, 19].reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        10,
+    );
+
+    const result = {
+        testResult
+    };
+
+    res.status(200).json(result);
+};
+
 module.exports = {
     reduceDesc,
+    reduceWithoutInitial,
+    reduceWithInitial
 };
