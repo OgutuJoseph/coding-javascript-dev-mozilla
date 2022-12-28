@@ -26,10 +26,19 @@
 
 /** **4.1 desc** */
 const reduceDesc = (req, res) => {
-    
+    const array1 = [1, 2, 3, 4];
+
+    // 0 + 1 + 2 + 3 + 4
+    const initialValue = 0;
+    const sumWithInitial = array1.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        initialValue
+    );
+
+    const result = { sumWithInitial };
+    res.status(200).json(result);
 };
 
-
 module.exports = {
-    pushDesc,
+    reduceDesc,
 };

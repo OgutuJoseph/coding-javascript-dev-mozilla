@@ -27,6 +27,7 @@ const { mapDesc, mapOnSquareRoots, mapToReformatObjects, mapUsingFunctionWithArg
 const { ofDesc, ofOnNonArrayConstructors } = require('../../controllers/built-in-objects/array/26.of()');
 const { popDesc, popOnNonArrayObjects, popWithObjectInArrayLikeFashion } = require('../../controllers/built-in-objects/array/27.pop()');
 const { pushDesc, pushMergingTwoArrays, pushOnNonArrays, pushWithObjectInArrayLikeFashion } = require('../../controllers/built-in-objects/array/28.push()');
+const { reduceDesc, reduceWithoutInitial, reduceWithInitial, reduceObjectsInArray, reduceFlattenArrayOfArrays, reduceCountInstancesOfValues, reduceGroupObjectsByProperty, reduceConcatArraysInArrayOfObjects, reduceRemoveDuplicates, reduceReplaceFilter_Map, reduceRunPromisesInSequence } = require('../../controllers/built-in-objects/array/29.reduce()');
 
 /** properties */
 router.get('/species', species);
@@ -202,5 +203,17 @@ router.get('/pushDesc', pushDesc);
 router.get('/pushMergingTwoArrays', pushMergingTwoArrays);
 router.get('/pushOnNonArrays', pushOnNonArrays);
 router.get('/pushWithObjectInArrayLikeFashion', pushWithObjectInArrayLikeFashion);
+/** reduce() */
+router.get('/reduceDesc', reduceDesc);
+router.get('/reduceWithoutInitial', reduceWithoutInitial);
+router.get('/reduceWithInitial', reduceWithInitial);
+router.get('/reduceObjectsInArray', reduceObjectsInArray);
+router.get('/reduceFlattenArrayOfArrays', reduceFlattenArrayOfArrays);
+router.get('/reduceCountInstancesOfValues', reduceCountInstancesOfValues);
+router.get('/reduceGroupObjectsByProperty', reduceGroupObjectsByProperty);
+router.get('/reduceConcatArraysInArrayOfObjects', reduceConcatArraysInArrayOfObjects);
+router.get('/reduceRemoveDuplicates', reduceRemoveDuplicates);
+router.get('/reduceReplaceFilter_Map', reduceReplaceFilter_Map);
+router.get('/reduceRunPromisesInSequence', reduceRunPromisesInSequence);
 
 module.exports = router;
