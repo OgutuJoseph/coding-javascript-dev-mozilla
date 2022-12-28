@@ -1,27 +1,21 @@
-/** ********** array methods - 29. reduce() ********** */
+/** ********** array methods - 30. reduceRight() ********** */
 /**
     Syntax
     // Arrow function
-    reduce((accumulator, currentValue) => { ... })
-    reduce((accumulator, currentValue, currentIndex) => { ... })
-    reduce((accumulator, currentValue, currentIndex, array) => { ... })
-
-    reduce((accumulator, currentValue) => { ... }, initialValue)
-    reduce((accumulator, currentValue, currentIndex) => { ... }, initialValue)
-    reduce((accumulator, currentValue, currentIndex, array) => { ... }, initialValue)
+    reduceRight((accumulator, currentValue) => { ... })
+    reduceRight((accumulator, currentValue, index) => { ... })
+    reduceRight((accumulator, currentValue, index, array) => { ... })
+    reduceRight((accumulator, currentValue, index, array) => { ... }, initialValue)
 
     // Callback function
-    reduce(callbackFn)
-    reduce(callbackFn, initialValue)
+    reduceRight(callbackFn)
+    reduceRight(callbackFn, initialValue)
 
-    // Inline callback function
-    reduce(function (accumulator, currentValue) { ... })
-    reduce(function (accumulator, currentValue, currentIndex) { ... })
-    reduce(function (accumulator, currentValue, currentIndex, array) { ... })
-
-    reduce(function (accumulator, currentValue) { ... }, initialValue)
-    reduce(function (accumulator, currentValue, currentIndex) { ... }, initialValue)
-    reduce(function (accumulator, currentValue, currentIndex, array) { ... }, initialValue)
+    // Callback reducer function
+    reduceRight(function (accumulator, currentValue) { ... })
+    reduceRight(function (accumulator, currentValue, index) { ... })
+    reduceRight(function (accumulator, currentValue, index, array) { ... })
+    reduceRight(function (accumulator, currentValue, index, array) { ... }, initialValue)
 */
 
 /** **4.1 desc** */
@@ -383,7 +377,7 @@ const reduceOnNonArrays = (req, res) => {
     const result = Array.prototype.reduce.call(arrayLike, (x, y) => x + y);
 
     res.status(200).json(result);
-};
+}
 
 
 module.exports = {
