@@ -28,6 +28,7 @@ const { ofDesc, ofOnNonArrayConstructors } = require('../../controllers/built-in
 const { popDesc, popOnNonArrayObjects, popWithObjectInArrayLikeFashion } = require('../../controllers/built-in-objects/array/27.pop()');
 const { pushDesc, pushMergingTwoArrays, pushOnNonArrays, pushWithObjectInArrayLikeFashion } = require('../../controllers/built-in-objects/array/28.push()');
 const { reduceDesc, reduceWithoutInitial, reduceWithInitial, reduceObjectsInArray, reduceFlattenArrayOfArrays, reduceCountInstancesOfValues, reduceGroupObjectsByProperty, reduceConcatArraysInArrayOfObjects, reduceRemoveDuplicates, reduceReplaceFilter_Map, reduceRunPromisesInSequence, reduceEnablingPiping, reduceWithSparseArrays, reduceOnNonArrays } = require('../../controllers/built-in-objects/array/29.reduce()');
+const { reduceRightDesc } = require('../../controllers/built-in-objects/array/30.reduceRight()');
 
 /** properties */
 router.get('/species', species);
@@ -218,5 +219,7 @@ router.get('/reduceRunPromisesInSequence', reduceRunPromisesInSequence);
 router.get('/reduceEnablingPiping', reduceEnablingPiping);
 router.get('/reduceWithSparseArrays', reduceWithSparseArrays);
 router.get('/reduceOnNonArrays', reduceOnNonArrays);
+/** reduceRight() */
+router.get('/reduceRightDesc', reduceRightDesc);
 
 module.exports = router;
