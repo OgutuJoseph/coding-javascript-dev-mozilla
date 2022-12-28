@@ -27,7 +27,7 @@ const { mapDesc, mapOnSquareRoots, mapToReformatObjects, mapUsingFunctionWithArg
 const { ofDesc, ofOnNonArrayConstructors } = require('../../controllers/built-in-objects/array/26.of()');
 const { popDesc, popOnNonArrayObjects, popWithObjectInArrayLikeFashion } = require('../../controllers/built-in-objects/array/27.pop()');
 const { pushDesc, pushMergingTwoArrays, pushOnNonArrays, pushWithObjectInArrayLikeFashion } = require('../../controllers/built-in-objects/array/28.push()');
-const { reduceDesc, reduceWithoutInitial, reduceWithInitial, reduceObjectsInArray, reduceFlattenArrayOfArrays, reduceCountInstancesOfValues, reduceGroupObjectsByProperty, reduceConcatArraysInArrayOfObjects, reduceRemoveDuplicates, reduceReplaceFilter_Map, reduceRunPromisesInSequence } = require('../../controllers/built-in-objects/array/29.reduce()');
+const { reduceDesc, reduceWithoutInitial, reduceWithInitial, reduceObjectsInArray, reduceFlattenArrayOfArrays, reduceCountInstancesOfValues, reduceGroupObjectsByProperty, reduceConcatArraysInArrayOfObjects, reduceRemoveDuplicates, reduceReplaceFilter_Map, reduceRunPromisesInSequence, reduceEnablingPiping, reduceWithSparseArrays, reduceOnNonArrays } = require('../../controllers/built-in-objects/array/29.reduce()');
 
 /** properties */
 router.get('/species', species);
@@ -213,7 +213,10 @@ router.get('/reduceCountInstancesOfValues', reduceCountInstancesOfValues);
 router.get('/reduceGroupObjectsByProperty', reduceGroupObjectsByProperty);
 router.get('/reduceConcatArraysInArrayOfObjects', reduceConcatArraysInArrayOfObjects);
 router.get('/reduceRemoveDuplicates', reduceRemoveDuplicates);
-// router.get('/reduceReplaceFilter_Map', reduceReplaceFilter_Map);
-// router.get('/reduceRunPromisesInSequence', reduceRunPromisesInSequence);
+router.get('/reduceReplaceFilter_Map', reduceReplaceFilter_Map);
+router.get('/reduceRunPromisesInSequence', reduceRunPromisesInSequence);
+router.get('/reduceEnablingPiping', reduceEnablingPiping);
+router.get('/reduceWithSparseArrays', reduceWithSparseArrays);
+router.get('/reduceOnNonArrays', reduceOnNonArrays);
 
 module.exports = router;
