@@ -216,6 +216,175 @@ const reduceRemoveDuplicates = (req, res) => {
     res.status(200).json(result);
 };
 
+/** **4.10 replace .filter().map() with .reduce()** */
+const reduceReplaceFilter_Map = (req, res) => {
+    /********geeksforgeeks example********/
+    const students = [
+        { id: "001", name: "Anish", sports: "Cricket" },
+        { id: "002", name: "Smriti", sports: "Basketball" },
+        { id: "003", name: "Rahul", sports: "Cricket" },
+        { id: "004", name: "Bakul", sports: "Basketball" },
+        { id: "005", name: "Nikita", sports: "Hockey" }
+    ];
+    const basketballPlayers = students.filter(function (student) {
+        return student.sports === "Basketball";
+    });
+    const bballersNames = students.filter(function (student) {
+        return student.sports === "Basketball";
+    }).map(function (student) {
+        return student.name;
+    });
+    /*************************************/
+
+
+    /******* devmozilla geeks approach*************/
+    const numberss = [
+        { x: -5 },
+        { x: 6 }, 
+        { x: 2 },
+        { x: 0 }        
+    ];
+    const doubledPositiveNumberss = numberss.reduce((accumulator, currentValue) => {
+        if (currentValue.x > 0) {
+            const doubled = currentValue.x * 2;
+            return [...accumulator, doubled];
+        }
+        return accumulator;
+    }, []);
+    /**********************************************/
+
+
+    /******* devmozilla actual example*************/
+    const numbers = [-5, 6, 2, 0];
+    const doubledPositiveNumbers = numbers.reduce((accumulator, currentValue) => {
+        if (currentValue > 0) {
+            const doubled = currentValue * 2;
+            return [...accumulator, doubled];
+        }
+        return accumulator;
+    }, []);
+    /**********************************************/
+    
+    const result = {
+        "g4geeks bball players": basketballPlayers,
+        "g4geeks bballers names": bballersNames,
+        "devmozilla geeks exaple": doubledPositiveNumberss,
+        "devmozilla actual exaple": doubledPositiveNumbers,
+    };
+    res.status(200).json(result);
+};
+
+/** **4.11 running promises in sequence** */
+const reduceRunPromisesInSequence = (req, res) => {
+    /**
+     * Chain a series of promise handlers.
+     *
+     * @param {array} arr - A list of promise handlers, each one receiving the
+     * resolved result of the previous handler and returning another promise.
+     * @param {*} input The initial value to start the promise chain
+     * @return {Object} Final promise with a chain of handlers attached
+     */
+    function runPromiseInSequence(arr, input) {
+        return arr.reduce(
+            (promiseChain, currentFunction) => promiseChain.then(currentFunction),
+            Promise.resolve(input),
+        );
+    }
+
+    // promise function 1
+    function p1(a) {
+        return new Promise((resolve, reject) => {
+            resolve(a * 5);
+        });
+    }
+
+    // promise function 2
+    function p2(a) {
+        return new Promise((resolve, reject) => {
+            resolve(a * 2);
+        });
+    }
+
+    // function 3 - will be wrapped in a resolved promise by .then()
+    function f3(a) {
+        return a * 3;
+    }
+
+    // promise function 4
+    function p4(a) {
+        return new Promise((resolve, reject) => {
+            resolve(a * 4);
+        });
+    }
+
+    const promiseArr = [p1, p2, f3, p4];
+    const result = runPromiseInSequence(promiseArr, 10).then(console.log);
+};
+
+/** **4.12 function composition enabling piping**  */
+const reduceEnablingPiping = (req, res) => {
+    // Building-blocks to use for composition
+    const double = (x) => 2 * x;
+    const triple = (x) => 3 * x;
+    const quadruple = (x) => 4 * x;
+
+    // Function composition enabling pipe functionality
+    const pipe =
+        (...functions) =>
+            (initialValue) =>
+                functions.reduce((acc, fn) => fn(acc), initialValue);
+
+    // Composed functions for multiplication of specific values
+    const multiply6 = pipe(double, triple);
+    const multiply9 = pipe(triple, triple);
+    const multiply16 = pipe(quadruple, quadruple);
+    const multiply24 = pipe(double, triple, quadruple);
+
+    const xValue = 6;
+
+    const xValueBy6 = multiply6(xValue);
+    const xValueBy9 = multiply9(xValue);
+    const xValueBy16 = multiply16(xValue);
+    const xValueBy24 = multiply24(xValue);
+
+    const result = {
+        "x Value ": xValue,
+        "x Value by 6": xValueBy6,
+        "x Value by 9": xValueBy9,
+        "x Value by 16": xValueBy16,
+        "x Value by 24": xValueBy24,
+    };
+
+    res.status(200).json(result);
+};
+
+/** **4.13 using reduce() with sparse arrays** */
+const reduceWithSparseArrays = (req, res) => {
+    const firstResult = [1, 2, , 4].reduce((a, b) => a + b);
+    const secondResult = [1, 2, undefined, 4].reduce((a, b) => a + b);    
+
+    const result = {
+        firstResult,
+        secondResult
+    };
+
+    res.status(200).json(result);
+};
+
+/** **4.14 calling reduce() on non-array objects** */
+const reduceOnNonArrays = (req, res) => {
+    const arrayLike = {
+        length: 3,
+        0: 2,
+        1: 3,
+        2: 4,
+    };
+
+    const result = Array.prototype.reduce.call(arrayLike, (x, y) => x + y);
+
+    res.status(200).json(result);
+}
+
 
 module.exports = {
     reduceDesc,
@@ -226,5 +395,10 @@ module.exports = {
     reduceCountInstancesOfValues,
     reduceGroupObjectsByProperty,
     reduceConcatArraysInArrayOfObjects,
-    reduceRemoveDuplicates 
+    reduceRemoveDuplicates,
+    reduceReplaceFilter_Map,
+    reduceRunPromisesInSequence,
+    reduceEnablingPiping,
+    reduceWithSparseArrays,
+    reduceOnNonArrays 
 };
