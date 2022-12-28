@@ -207,12 +207,12 @@ router.get('/pushWithObjectInArrayLikeFashion', pushWithObjectInArrayLikeFashion
 router.get('/reduceDesc', reduceDesc);
 router.get('/reduceWithoutInitial', reduceWithoutInitial);
 router.get('/reduceWithInitial', reduceWithInitial);
-// router.get('/reduceObjectsInArray', reduceObjectsInArray);
-// router.get('/reduceFlattenArrayOfArrays', reduceFlattenArrayOfArrays);
-// router.get('/reduceCountInstancesOfValues', reduceCountInstancesOfValues);
-// router.get('/reduceGroupObjectsByProperty', reduceGroupObjectsByProperty);
-// router.get('/reduceConcatArraysInArrayOfObjects', reduceConcatArraysInArrayOfObjects);
-// router.get('/reduceRemoveDuplicates', reduceRemoveDuplicates);
+router.get('/reduceObjectsInArray', reduceObjectsInArray);
+router.get('/reduceFlattenArrayOfArrays', reduceFlattenArrayOfArrays);
+router.get('/reduceCountInstancesOfValues', reduceCountInstancesOfValues);
+router.get('/reduceGroupObjectsByProperty', reduceGroupObjectsByProperty);
+router.get('/reduceConcatArraysInArrayOfObjects', reduceConcatArraysInArrayOfObjects);
+router.get('/reduceRemoveDuplicates', reduceRemoveDuplicates);
 // router.get('/reduceReplaceFilter_Map', reduceReplaceFilter_Map);
 // router.get('/reduceRunPromisesInSequence', reduceRunPromisesInSequence);
 
