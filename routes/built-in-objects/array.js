@@ -30,6 +30,7 @@ const { pushDesc, pushMergingTwoArrays, pushOnNonArrays, pushWithObjectInArrayLi
 const { reduceDesc, reduceWithoutInitial, reduceWithInitial, reduceObjectsInArray, reduceFlattenArrayOfArrays, reduceCountInstancesOfValues, reduceGroupObjectsByProperty, reduceConcatArraysInArrayOfObjects, reduceRemoveDuplicates, reduceReplaceFilter_Map, reduceRunPromisesInSequence, reduceEnablingPiping, reduceWithSparseArrays, reduceOnNonArrays } = require('../../controllers/built-in-objects/array/29.reduce()');
 const { reduceRightDesc, reduceRightWithoutInitial, reduceRightWithInitial, reduceRightSumArrayValues, reduceRightFlattenArrays, reduceRightWithAsyncFunctions, reduceRightDiffWithReduce, reduceRightWithComposableFunctions, reduceRightWithSparseArrays, reduceRightOnNonArrays } = require('../../controllers/built-in-objects/array/30.reduceRight()');
 const { reverseDesc, reverseWithoutMutatingArrays, reverseWithSparseArrays, reverseOnNonArrays } = require('../../controllers/built-in-objects/array/31.reverse()');
+const { shiftDesc, shiftWithWhileLoop, shiftOnNonArrays } = require('../../controllers/built-in-objects/array/32.shift()');
 
 /** properties */
 router.get('/species', species);
@@ -236,5 +237,9 @@ router.get('/reverseDesc', reverseDesc);
 router.get('/reverseWithourMutatingArrays', reverseWithoutMutatingArrays);
 router.get('/reverseWithSparseArrays', reverseWithSparseArrays);
 router.get('/reverseOnNonArrays', reverseOnNonArrays);
+/** shift() */
+router.get('/shiftDesc', shiftDesc);
+router.get('/shiftWithWhileLoop', shiftWithWhileLoop);
+router.get('/shiftOnNonArrays', shiftOnNonArrays);
 
 module.exports = router;
