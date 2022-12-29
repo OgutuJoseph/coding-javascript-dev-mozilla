@@ -72,7 +72,7 @@ const reverseOnNonArrays = (req, res) => {
     // The '2' index is deleted because the '0' index was not present originally
 
     res.status(200).json(result);
-}
+};
 
 
 module.exports = {
