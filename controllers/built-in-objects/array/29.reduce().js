@@ -383,7 +383,7 @@ const reduceOnNonArrays = (req, res) => {
     const result = Array.prototype.reduce.call(arrayLike, (x, y) => x + y);
 
     res.status(200).json(result);
-}
+};
 
 
 module.exports = {
