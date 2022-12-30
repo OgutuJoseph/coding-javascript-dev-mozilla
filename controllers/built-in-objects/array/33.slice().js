@@ -6,7 +6,7 @@
     slice(start, end)
 */
 
-/** **4.1 desc** */
+/** **33.1 desc** */
 const sliceDesc = (req, res) => {
     // The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included)
     // where start and end represent the index of items in that array.
@@ -46,7 +46,7 @@ const sliceDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 using slice** */
+/** **33.2 using slice** */
 const sliceUses = (req, res) => {
     const myHonda = {
         color: "red",
@@ -68,7 +68,7 @@ const sliceUses = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 calling slice() on non-array objects** */
+/** **33.3 calling slice() on non-array objects** */
 const sliceOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,
@@ -98,7 +98,7 @@ const sliceOnNonArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.4 using slice() to convert array-like objects to arrays** */
+/** **33.4 using slice() to convert array-like objects to arrays** */
 const sliceToConvertArrayLikeObjects = (req, res) => {
     // slice() is called with `this` passed as the first argument
     const slice = Function.prototype.call.bind(Array.prototype.slice);
@@ -118,7 +118,7 @@ const sliceToConvertArrayLikeObjects = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.5 using slice() on sparse arrays** */
+/** **33.5 using slice() on sparse arrays** */
 const sliceWithSparseArrays = (req, res) => {
     const result = [1, 2, , 4, 5].slice(1, 4); // [2, empty, 4]
 
