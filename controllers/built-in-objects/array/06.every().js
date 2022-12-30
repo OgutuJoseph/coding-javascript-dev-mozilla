@@ -17,7 +17,7 @@
     every(function (element, index, array) { ... }, thisArg)
  */
 
-/** **4.1 desc** */
+/** **6.1 desc** */
 const everyDesc = (req, res) => {
     // The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
 
@@ -32,7 +32,7 @@ const everyDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 check if one array is a subset of another array** */
+/** **6.2 check if one array is a subset of another array** */
 const everyToTestAllElements = (req, res) => {
     function isBigEnough(element, index, array) {
         return element >= 10;
@@ -49,7 +49,7 @@ const everyToTestAllElements = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 check if one array is a subset of another array** */
+/** **6.3 check if one array is a subset of another array** */
 const everyToTestArray = (req, res) => {
     const isSubset = (array1, array2) => array2.every((element) => array1.includes(element));
 
@@ -64,7 +64,7 @@ const everyToTestArray = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.4 using every() on sparse arrays** */
+/** **6.4 using every() on sparse arrays** */
 const everyOnSparseArrays = (req, res) => {
     //every() will not run its predicate on empty slots.
 
@@ -79,7 +79,7 @@ const everyOnSparseArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.5 affecting inital array (modifying)** */
+/** **6.5 affecting inital array (modifying)** */
 const everyToModifyArray = (req, res) => {
     let arr = [1, 2, 3, 4];
     let arr2 = [1, 2, 3, 4, 5];
@@ -110,7 +110,7 @@ const everyToModifyArray = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.6 affecting inital array (appending)** */
+/** **6.6 affecting inital array (appending)** */
 const everyToAppendArray = (req, res) => {
     let arr = [1, 2, 3];
     let arr2 = [1, 2, 3, 4, 5, 6];
@@ -139,7 +139,7 @@ const everyToAppendArray = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.7 affecting inital array (deleting)** */
+/** **6.7 affecting inital array (deleting)** */
 const everyToDeleteArray = (req, res) => {
     let arr = [1, 2, 3, 4];
     let arr2 = [1, 2, 3, 4, 5, 6];
@@ -180,7 +180,7 @@ const everyToDeleteArray = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.8 calling every() on non-array objects**  */
+/** **6.8 calling every() on non-array objects**  */
 const everyOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,

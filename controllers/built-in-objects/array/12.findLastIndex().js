@@ -17,7 +17,7 @@
     findLastIndex(function (element, index, array) { ... }, thisArg)
  */
 
-/** **4.1 desc** */
+/** **12.1 desc** */
 const findLastIndexDesc = (req, res) => {
     // The findLastIndex() method iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned.
     const array1 = [5, 12, 50, 130, 44];
@@ -29,7 +29,7 @@ const findLastIndexDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 find the index of the last prime number in an array** */
+/** **12.2 find the index of the last prime number in an array** */
 const findLastIndexOfPrime = (req, res) => {
     function isPrime(element) {
         if (element % 2 === 0 || element < 2) {
@@ -54,7 +54,7 @@ const findLastIndexOfPrime = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 using findLastIndex() on sparse arrays** */
+/** **12.3 using findLastIndex() on sparse arrays** */
 const findLastIndexOnSparseArrays = (req, res) => {
     const array = [1, , 3];
 
@@ -63,7 +63,7 @@ const findLastIndexOnSparseArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.4 calling findLastIndex() on non-array objects** */
+/** **12.4 calling findLastIndex() on non-array objects** */
 const findLastIndexOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,

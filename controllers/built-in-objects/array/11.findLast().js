@@ -17,7 +17,7 @@
     findLast(function (element, index, array) { ... }, thisArg)
  */
 
-/** **4.1 desc** */
+/** **11.1 desc** */
 const findLastDesc = (req, res) => {
     // The findLast() method iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function. If no elements satisfy the testing function, undefined is returned.
     // const array = [5, 12, 50, 130, 44];
@@ -32,7 +32,7 @@ const findLastDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 find last object in an array matching on element properties** */
+/** **11.2 find last object in an array matching on element properties** */
 const findLastMatchingProperty = (req, res) => {
     const inventory = [
         { name: "apples", quantity: 2 },
@@ -51,7 +51,7 @@ const findLastMatchingProperty = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 using arrow function and destructuring** */
+/** **11.3 using arrow function and destructuring** */
 const findLastUsingArrowFunction = (req, res) => {
     const inventory = [
         { name: "apples", quantity: 2 },
@@ -65,7 +65,7 @@ const findLastUsingArrowFunction = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.4 Find last prime number in an array** */
+/** **11.4 Find last prime number in an array** */
 const findLastPrimeNumber = (req, res) => {
     function isPrime(element) {
         if (element % 2 === 0 || element < 2) {
@@ -91,7 +91,7 @@ const findLastPrimeNumber = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.5 using findLast() on sparse arrays** */
+/** **11.5 using findLast() on sparse arrays** */
 const findLastOnSparseArrays = (req, res) => {
     // Declare array with no elements at indexes 2, 3, and 4
     const array = [0, 1, , , , 5, 6];
@@ -122,7 +122,7 @@ const findLastOnSparseArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.6 calling findLast() on non-array objects** */
+/** **11.6 calling findLast() on non-array objects** */
 const findLastOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,
@@ -135,7 +135,6 @@ const findLastOnNonArrays = (req, res) => {
 
     res.status(200).json(result);
 };
-
 
 module.exports = {
     findLastDesc,

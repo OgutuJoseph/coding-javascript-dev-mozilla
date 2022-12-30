@@ -4,7 +4,7 @@
     entries()
  */
 
-/** **4.1 desc** */
+/** **5.1 desc** */
 const entriesDesc = (req, res) => {
     // The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
 
@@ -24,7 +24,7 @@ const entriesDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** 4.2 **iterating with index and element** */
+/** 5.2 **iterating with index and element** */
 const entriesWithIndexAndElement = (req, res) => {
     const a = ["a", "b", "c"];
 
@@ -40,7 +40,7 @@ const entriesWithIndexAndElement = (req, res) => {
     res.status(200).json(result);
 };
 
-/** 4.3 **using a for...of loop**  */
+/** 5.3 **using a for...of loop**  */
 const entriesWithFor_Of_Loop = (req, res) => {
     const array = ["a", "b", "c"];
     const arrayEntries = array.entries();

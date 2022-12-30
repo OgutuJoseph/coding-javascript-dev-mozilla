@@ -6,7 +6,7 @@
     fill(value, start, end)
  */
 
-/** **4.1 desc** */
+/** **7.1 desc** */
 const fillDesc = (req, res) => {
     // The fill() method changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length). It returns the modified array.
     
@@ -30,7 +30,7 @@ const fillDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 using fill** */
+/** **7.2 using fill** */
 const fillUse = (req, res) => {
     const array = [1, 2, 3];
 
@@ -64,7 +64,7 @@ const fillUse = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 using fill() to create a matrix of all 1** */
+/** **7.3 using fill() to create a matrix of all 1** */
 const fillForMatrixOfAllOne = (req, res) => {
     const arr = new Array(3);
     for (let i = 0; i < arr.length; i++) {
@@ -83,7 +83,7 @@ const fillForMatrixOfAllOne = (req, res) => {
 };
 
 
-/** **4.4 using fill() to populate an empty array** */
+/** **7.4 using fill() to populate an empty array** */
 const fillForEmptArray = (req, res) => {
     // This example shows how to populate an array, setting all elements to a specific value. The end parameter does not have to be specified.
     const tempGirls = Array(5).fill("girl", 0)
@@ -91,7 +91,7 @@ const fillForEmptArray = (req, res) => {
     res.status(200).json(tempGirls);
 };
 
-/** 4.5 calling fill() on non-array objects** */
+/** 7.5 calling fill() on non-array objects** */
 const fillOnNonArrays = (req, res) => {
     const arrayLike = { length: 2 };
     const array = Array.prototype.fill.call(arrayLike, 1);
