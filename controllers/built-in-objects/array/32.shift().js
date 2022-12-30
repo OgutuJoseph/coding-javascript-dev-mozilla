@@ -54,7 +54,7 @@ const shiftOnNonArrays = (req, res) => {
     Array.prototype.shift.call(plainObj);
     console.log(plainObj);
     // { length: 0 }
-}
+};
 
 module.exports = {
     shiftDesc,
