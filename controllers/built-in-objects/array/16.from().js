@@ -18,7 +18,7 @@
     Array.from(arrayLike, function (element, index) { ... }, thisArg)
  */
 
-/** **4.1 desc** */
+/** **16.1 desc** */
 const fromDesc = (req, res) => {
     // The Array.from() static method creates a new, shallow-copied Array instance from an iterable or array-like object.
     
@@ -34,20 +34,20 @@ const fromDesc = (req, res) => {
 
 };
 
-/** **4.2 array from a string** */
+/** **16.2 array from a string** */
 const fromString = (req, res) => {
     const result = Array.from("foo");
     res.status(200).json(result);
 };
 
-/** **4.3 array from a set** */
+/** **16.3 array from a set** */
 const fromSet = (req, res) => {
     const set = new Set(["foo", "bar", "baz", "foo", "foo", "foo3"]);
     const result = Array.from(set) 
     res.status(200).json(result);
 };
 
-/** **4.3 array from a map** */
+/** **16.4 array from a map** */
 const fromMap = (req, res) => {
     const map = new Map([
         [1, 2],
@@ -76,7 +76,7 @@ const fromMap = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.4 array from a node list** */
+/** **16.5 array from a node list** */
 const fromNodeList = (req, res) => {
     // Create an array based on a property of DOM Elements
     const images = document.querySelectorAll("img");
@@ -84,7 +84,7 @@ const fromNodeList = (req, res) => {
     const insecureSources = sources.filter((link) => link.startsWith("http://"));
 };
 
-/** **4.5 array from an array-like object (arguments)** */
+/** **16.6 array from an array-like object (arguments)** */
 const fromArrayLikeObjects = (req, res) => {
     function f() {
         return Array.from(arguments);
@@ -94,7 +94,7 @@ const fromArrayLikeObjects = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.6 using arrow functions and array.from()** */
+/** **16.7 using arrow functions and array.from()** */
 const fromArrayFunctionsAndArray_From = (req, res) => {
     // Using an arrow function as the map function to manipulate the elements
     const result1 = Array.from([1, 2, 3], (x) => x + x);
@@ -111,7 +111,7 @@ const fromArrayFunctionsAndArray_From = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.7 sequence generator (range)** */
+/** **16.8 sequence generator (range)** */
 const fromUsingSequenceGenerator = (req, res) => {
     // Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP, etc.)
     const range = (start, stop, step) =>
@@ -137,7 +137,7 @@ const fromUsingSequenceGenerator = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.8 calling from() on non-array constructors** */
+/** **16.9 calling from() on non-array constructors** */
 const fromUsingNonArrayConstructors = (req, res) => {
     let output1 = [];
     function NotArray(len) {
