@@ -32,7 +32,7 @@ const { reduceRightDesc, reduceRightWithoutInitial, reduceRightWithInitial, redu
 const { reverseDesc, reverseWithoutMutatingArrays, reverseWithSparseArrays, reverseOnNonArrays } = require('../../controllers/built-in-objects/array/31.reverse()');
 const { shiftDesc, shiftWithWhileLoop, shiftOnNonArrays } = require('../../controllers/built-in-objects/array/32.shift()');
 const { sliceDesc, sliceUses, sliceOnNonArrays, sliceToConvertArrayLikeObjects, sliceWithSparseArrays } = require('../../controllers/built-in-objects/array/33.slice()');
-const { someDesc, someToTestArrayValues } = require('../../controllers/built-in-objects/array/34.some()');
+const { someDesc, someToTestArrayValues, someToTestUsingArrowFuncs, someToCheckIfValueExists, someToConvertToBoolean, someWithSparseArrays, someOnNonArrays } = require('../../controllers/built-in-objects/array/34.some()');
 
 /** properties */
 router.get('/species', species);
@@ -252,5 +252,10 @@ router.get('/sliceWithSparseArrays', sliceWithSparseArrays);
 /** some() */
 router.get('/someDesc', someDesc);
 router.get('/someToTestArrayValues', someToTestArrayValues);
+router.get('/someToTestUsingArrowFuncs', someToTestUsingArrowFuncs);
+router.get('/someToCheckIfValueExists', someToCheckIfValueExists);
+router.get('/someToConvertToBoolean', someToConvertToBoolean);
+router.get('/someWithSparseArrays', someWithSparseArrays);
+router.get('/someOnNonArrays', someOnNonArrays);
 
 module.exports = router;
