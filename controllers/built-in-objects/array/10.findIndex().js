@@ -17,7 +17,7 @@
     findIndex(function (element, index, array) { ... }, thisArg)
  */
 
-/** **4.1 desc** */
+/** **10.1 desc** */
 const findIndexDesc = (req, res) => {
     // The findIndex() method returns the index of the first element in an array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned.
 
@@ -30,7 +30,7 @@ const findIndexDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 find the index of a prime number in an array** */
+/** **10.2 find the index of a prime number in an array** */
 const findIndexOfPrimeNumber = (req, res) => {
     function isPrime(element) {
         if (element % 2 === 0 || element < 2) {
@@ -55,7 +55,7 @@ const findIndexOfPrimeNumber = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 using findIndex() on sparse arrays** */
+/** **10.3 using findIndex() on sparse arrays** */
 const findIndexOnSparseArrays = (req, res) => {
     const array = [1,  , 3]
 
@@ -64,7 +64,7 @@ const findIndexOnSparseArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.4 calling findIndex() on non-array objects** */
+/** **10.4 calling findIndex() on non-array objects** */
 const findIndexOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,
