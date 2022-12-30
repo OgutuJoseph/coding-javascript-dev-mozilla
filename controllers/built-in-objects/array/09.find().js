@@ -17,7 +17,7 @@
     find(function (element, index, array) { ... }, thisArg)
  */
 
-/** **4.1 desc** */
+/** **9.1 desc** */
 const findDesc = (req, res) => {
     // The find() method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
 
@@ -30,7 +30,7 @@ const findDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 find an object in an array by one of its properties** */
+/** **9.2 find an object in an array by one of its properties** */
 const findByProperties = (req, res) => {
     const inventory = [
         { name: "apples", quantity: 2 },
@@ -47,7 +47,7 @@ const findByProperties = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 using arrow function and destructuring** */
+/** **9.3 using arrow function and destructuring** */
 const findUsingArrowFunction = (req, res) => {
     const inventory = [
         { name: "apples", quantity: 2 },
@@ -61,7 +61,7 @@ const findUsingArrowFunction = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.4 find a prime number in an array** */
+/** **9.4 find a prime number in an array** */
 const findAPrimeNumber = (req, res) => {
     function isPrime(element, index, array) {
         let start = 2;
@@ -84,7 +84,7 @@ const findAPrimeNumber = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.5 using find() on sparse arrays** */
+/** **9.5 using find() on sparse arrays** */
 const findOnSparseArrays = (req, res) => {
     // Declare array with no elements at indexes 2, 3, and 4
     const array = [0, 1, , , , 5, 6];
@@ -114,7 +114,7 @@ const findOnSparseArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.6 calling find() on non-array objects** */
+/** **9.6 calling find() on non-array objects** */
 const findOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,
