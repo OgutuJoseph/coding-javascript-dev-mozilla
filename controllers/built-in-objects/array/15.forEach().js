@@ -4,7 +4,7 @@
     // Arrow function
     forEach((element) => { ... })
     forEach((element, index) => { ... })
-    forEach((element, index, array) => { ... }
+    forEach((element, index, array) => { ... })
 
     // Callback function
     forEach(callbackFn)
