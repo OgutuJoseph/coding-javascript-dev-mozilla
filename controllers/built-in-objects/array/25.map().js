@@ -17,7 +17,7 @@
     map(function (element, index, array) { ... }, thisArg)
 */
 
-/** **4.1 desc** */
+/** **25.1 desc** */
 const mapDesc = (req, res) => {
     // The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.    
     
@@ -33,7 +33,7 @@ const mapDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 mapping an array of numbers to an array of square roots** */
+/** **25.2 mapping an array of numbers to an array of square roots** */
 const mapOnSquareRoots = (req, res) => {
     const numbers = [1, 4, 9];
     const roots = numbers.map((num) => Math.sqrt(num));
@@ -45,7 +45,7 @@ const mapOnSquareRoots = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 Using map to reformat objects in an array** */
+/** **25.3 Using map to reformat objects in an array** */
 const mapToReformatObjects = (req, res) => {
     const kvArray = [
         { key: 1, value: 10 },
@@ -63,7 +63,7 @@ const mapToReformatObjects = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.4 mapping an array of numbers using a function containing an argument** */
+/** **25.4 mapping an array of numbers using a function containing an argument** */
 const mapUsingFunctionWithArg = (req, res) => {
     const numbers = [1, 4, 9];
     const doubles = numbers.map((num) => num * 2);
@@ -76,7 +76,7 @@ const mapUsingFunctionWithArg = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.5 calling map() on non-array objects** */
+/** **25.5 calling map() on non-array objects** */
 const mapOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,
@@ -88,7 +88,7 @@ const mapOnNonArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.6 using map() on sparse arrays** */
+/** **25.6 using map() on sparse arrays** */
 const mapOnSparseArrays = (req, res) => {
 
     let outputs = [];
@@ -106,7 +106,7 @@ const mapOnSparseArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.7 using parseInt() with map()** */
+/** **25.7 using parseInt() with map()** */
 const mapWithParseInt = (req, res) => {
     const returnInt = (element) => parseInt(element, 10);
 
@@ -136,7 +136,7 @@ const mapWithParseInt = (req, res) => {
     res.status(200).json(result)
 };
 
-/** **4.8 mapped array contains undefined** */
+/** **25.8 mapped array contains undefined** */
 const mapWithUndefineds = (req, res) => {
     const numbers = [1, 2, 3, 4];
     const numbers2 = [1, 2, 3, 4, 5, 6];
