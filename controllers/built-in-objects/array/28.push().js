@@ -6,7 +6,7 @@
     push(element0, element1, ... elementN)
 */
 
-/** **4.1 desc** */
+/** **28.1 desc** */
 const pushDesc = (req, res) => {
     // The push() method adds one or more elements to the end of an array and returns the new length of the array.
 
@@ -24,7 +24,7 @@ const pushDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 merging two arrays** */
+/** **28.2 merging two arrays** */
 const pushMergingTwoArrays = (req, res) => {
     const vegetables = ["parsnip", "potato"];
     const moreVegs = ["celery", "beetroot"];
@@ -35,7 +35,7 @@ const pushMergingTwoArrays = (req, res) => {
     res.status(200).json(vegetables);
 };
 
-/** **4.3 calling push() on non-array objects** */
+/** **28.3 calling push() on non-array objects** */
 const pushOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,
@@ -58,7 +58,7 @@ const pushOnNonArrays = (req, res) => {
     res.status(200).json(result)
 };
 
-/** **4.4 using an object in an array-like fashion** */
+/** **28.4 using an object in an array-like fashion** */
 const pushWithObjectInArrayLikeFashion = (req, res) => {
     const obj = {
         length: 0,

@@ -5,7 +5,7 @@
     includes(searchElement, fromIndex)
  */
 
-/** **4.1 desc** */
+/** **19.1 desc** */
 const includesDesc = (req, res) => {
     // TThe includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
     const array = [1, 2, 3];
@@ -25,7 +25,7 @@ const includesDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 using includes()*** */
+/** **19.2 using includes()*** */
 const includesUses = (req, res) => {
     const result1 = [1, 2, 3].includes(2); // true
     const result2 = [1, 2, 3].includes(4); // false
@@ -46,7 +46,7 @@ const includesUses = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 fromIndex is greater than or equal to the array length** */
+/** **19.3 fromIndex is greater than or equal to the array length** */
 const includesWithGreaterFromIndex = (req, res) => {
     const arr = ["a", "b", "c"];
 
@@ -63,7 +63,7 @@ const includesWithGreaterFromIndex = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.4 computed index is less than 0** */
+/** **19.4 computed index is less than 0** */
 const includesWithComputedIndexLessThanZero = (req, res) => {
     // array length is 3
     // fromIndex is -100
@@ -94,14 +94,14 @@ const includesWithComputedIndexLessThanZero = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.5 using includes() on sparse arrays** */
+/** **19.5 using includes() on sparse arrays** */
 const includesOnSparseArrays = (req, res) => {
     // You can search for undefined in a sparse array and get true.
     const result = [1, , 3].includes(undefined);
     res.status(200).json(result);
 };
 
-/** **4.6 calling includes() on non-array objects** */
+/** **19.6 calling includes() on non-array objects** */
 const includesOnNonArrays = (req, res) => {
     // The includes() method reads the length property of this and then accesses each integer index.
     const arrayLike = {

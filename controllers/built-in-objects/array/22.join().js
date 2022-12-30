@@ -5,7 +5,7 @@
     join(separator)
  */
 
-/** **4.1 desc** */
+/** **22.1 desc** */
 const joinDesc = (req, res) => {
     // The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator.    
     
@@ -28,7 +28,7 @@ const joinDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 using join() on sparse arrays** */
+/** **22.2 using join() on sparse arrays** */
 const joinOnSparseArrays = (req, res) => {
     // join() treats empty slots the same as undefined and produces an extra separator:
     const result1 = [1, , 3].join(); // '1,,3'
@@ -42,7 +42,7 @@ const joinOnSparseArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 calling join() on non-array objects** */
+/** **22.3 calling join() on non-array objects** */
 const joinOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,

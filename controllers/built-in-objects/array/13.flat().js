@@ -5,7 +5,7 @@
     flat(depth)
  */
 
-/** **4.1 desc** */
+/** **13.1 desc** */
 const flatDesc = (req, res) => {
     // The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 
@@ -28,7 +28,7 @@ const flatDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 flattening nested arrays** */
+/** **13.2 flattening nested arrays** */
 const flatOnNestedArrays = (req, res) => {
     const arr1 = [1, 2, [3, 4]];
     const depth1 = arr1.flat();
@@ -52,7 +52,7 @@ const flatOnNestedArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 using flat() on sparse arrays** */
+/** **13.3 using flat() on sparse arrays** */
 const flatOnSparseArrays = (req, res) => {
     // The flat() method removes empty slots in arrays.
     const arr1 = [1, 2, , 4, 5];
@@ -75,7 +75,7 @@ const flatOnSparseArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.4 calling flat() on non-array objects** */
+/** **13.4 calling flat() on non-array objects** */
 const flatOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,

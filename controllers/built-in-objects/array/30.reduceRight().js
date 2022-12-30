@@ -18,7 +18,7 @@
     reduceRight(function (accumulator, currentValue, index, array) { ... }, initialValue)
 */
 
-/** **4.1 desc** */
+/** **30.1 desc** */
 const reduceRightDesc = (req, res) => {
     // The reduceRight() method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.
     const array1 = [[0, 1], [2, 3], [4, 5]];
@@ -28,7 +28,7 @@ const reduceRightDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 how reduceRight() works without an initial value** */
+/** **30.2 how reduceRight() works without an initial value** */
 const reduceRightWithoutInitial = (req, res) => {
     const array = [0, 1, 2, 3, 4];
     const result = array.reduceRight(
@@ -37,7 +37,7 @@ const reduceRightWithoutInitial = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 cow reduceRight() works with an initial value** */
+/** **30.3 cow reduceRight() works with an initial value** */
 const reduceRightWithInitial = (req, res) => {
     const array = [0, 1, 2, 3, 4];
     const result = array.reduceRight(
@@ -48,7 +48,7 @@ const reduceRightWithInitial = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.4 sum up all values within an array** */
+/** **30.4 sum up all values within an array** */
 const reduceRightSumArrayValues = (req, res) => {
     const array = [0, 1, 2, 3];
     const result = array.reduceRight((a, b) => a + b);
@@ -56,7 +56,7 @@ const reduceRightSumArrayValues = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.5 flatten an array of arrays**  */
+/** **30.5 flatten an array of arrays**  */
 const reduceRightFlattenArrays = (req, res) => {
     const arrays = [
         [0, 1],
@@ -69,7 +69,7 @@ const reduceRightFlattenArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.6 run a list of asynchronous functions with callbacks in series each passing their results to the next**  */
+/** **30.6 run a list of asynchronous functions with callbacks in series each passing their results to the next**  */
 const reduceRightWithAsyncFunctions = (req, res) => {
     // const waterfall =
     //     (...functions) =>
@@ -120,7 +120,7 @@ const reduceRightWithAsyncFunctions = (req, res) => {
         
 };
 
-/** **4.7 difference between reduce and reduceRight** */
+/** **30.7 difference between reduce and reduceRight** */
 const reduceRightDiffWithReduce = (req, res) => {
     const a = ["1", "2", "3", "4", "5"];
     const left = a.reduce((prev, cur) => prev + cur);
@@ -134,7 +134,7 @@ const reduceRightDiffWithReduce = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.8 defining composable functions**  */
+/** **30.8 defining composable functions**  */
 const reduceRightWithComposableFunctions = (req, res) => {
     const compose =
         (...args) =>
@@ -161,7 +161,7 @@ const reduceRightWithComposableFunctions = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.9 using reduceRight() with sparse arrays** */
+/** **30.9 using reduceRight() with sparse arrays** */
 const reduceRightWithSparseArrays = (req, res) => {
     const result1 = [1, 2, , 4].reduceRight((a, b) => a + b); // 7
     const result2 = [1, 2, undefined, 4].reduceRight((a, b) => a + b); // NaN
@@ -174,7 +174,7 @@ const reduceRightWithSparseArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.10 calling reduceRight() on non-array objects** */
+/** **30.10 calling reduceRight() on non-array objects** */
 const reduceRightOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,

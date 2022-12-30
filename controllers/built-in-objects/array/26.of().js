@@ -6,7 +6,7 @@
     Array.of(element0, element1, ... elementN)
 */
 
-/** **4.1 desc** */
+/** **26.1 desc** */
 const ofDesc = (req, res) => {
     // The Array.of() method creates a new Array instance from a variable number of arguments, regardless of number or type of the arguments.
     // The difference between Array.of() and the Array() constructor is in the handling of single arguments: 
@@ -31,7 +31,7 @@ const ofDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 calling of() on non-array constructors** */
+/** **26.2 calling of() on non-array constructors** */
 const ofOnNonArrayConstructors = (req, res) => {
     let output = [];
     function NotArray(len) {

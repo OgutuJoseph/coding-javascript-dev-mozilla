@@ -17,7 +17,7 @@
     flatMap(function (element, index, array) { ... }, thisArg)
  */
 
-/** **4.1 desc** */
+/** **14.1 desc** */
 const flatMapDesc = (req, res) => {
     // The flatMap() method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level.
     // It is identical to a map() followed by a flat() of depth 1 (arr.map(...args).flat()), but slightly more efficient than calling those two methods separately.
@@ -29,7 +29,7 @@ const flatMapDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 pre-allocate and explicitly iterate** */
+/** **14.2 pre-allocate and explicitly iterate** */
 const flatMapExplicitIterate = (req, res) => {
     const arr = [1, 2, 3, 4];
 
@@ -55,7 +55,7 @@ const flatMapExplicitIterate = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 map() and flatMap()** */
+/** **14.3 map() and flatMap()** */
 const flatMapComparison = (req, res) => {
     const arr = [1, 2, 3, 4];
 
@@ -79,7 +79,7 @@ const flatMapComparison = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.4 generate a list of words from a list of sentences** */
+/** **14.4 generate a list of words from a list of sentences** */
 const flatMapOnSentences = (req, res) => {
     const arr = ["it's Sunny in", "", "California"];
 
@@ -94,7 +94,7 @@ const flatMapOnSentences = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.5 for adding and removing items during a map()** */
+/** **14.5 for adding and removing items during a map()** */
 const flatMapToAddAndRemove = (req, res) => {
     const a = [5, 4, -3, 20, 17, -33, -4, 18];
     
@@ -109,7 +109,7 @@ const flatMapToAddAndRemove = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.6 using flatMap() on sparse arrays** */
+/** **14.6 using flatMap() on sparse arrays** */
 const flatMapOnSparseArrays = (req, res) => {
     // The callbackFn won't be called for empty slots in the source array because map() doesn't, while flat() ignores empty slots in the returned arrays.
     const firstResult = [1, 2, , 4, 5].flatMap((x) => [x, x * 2]);
@@ -123,7 +123,7 @@ const flatMapOnSparseArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.7 calling flatMap() on non-array objects */
+/** **14.7 calling flatMap() on non-array objects */
 const flatMapOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,

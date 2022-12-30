@@ -17,7 +17,7 @@
     forEach(function (element, index, array) { ... }, thisArg)
  */
 
-/** **4.1 desc** */
+/** **15.1 desc** */
 const forEachDesc = (req, res) => {
     // The forEach() method executes a provided function once for each array element.
     const array1 = ['a', 'b', 'c']
@@ -30,7 +30,7 @@ const forEachDesc = (req, res) => {
     res.status(200).json(outputs);
 };
 
-/** **4.2 forEach() expects a synchronous function — it does not wait for promises.** */
+/** **15.2 forEach() expects a synchronous function — it does not wait for promises.** */
 const forEachSyncDesc = (req, res) => {
     const ratings = [5, 4, 5];
     let sum = 0;
@@ -50,7 +50,7 @@ const forEachSyncDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 Using forEach() on sparse arrays** */
+/** **15.3 Using forEach() on sparse arrays** */
 const forEachOnSparseArrays = (req, res) => {
     const arraySparse = [1, 3, /* empty */, 7];
     let numCallbackRuns = 0;
@@ -70,7 +70,7 @@ const forEachOnSparseArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.4 converting a for loop to forEach** */
+/** **15.4 converting a for loop to forEach** */
 const forEachFromForLoop = (Req, res) => {
     const items = ["item1", "item2", "item3"];
     const forItems = [];
@@ -94,7 +94,7 @@ const forEachFromForLoop = (Req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.5 printing the contents of an array** */
+/** **15.5 printing the contents of an array** */
 const forEachToPrint = (req, res) => {
     let outputs = [];
     const logArrayElements = (element, index /*, array */) => {
@@ -105,7 +105,7 @@ const forEachToPrint = (req, res) => {
     res.status(200).json(outputs);
 };
 
-/** **4.6 using thisArg** */
+/** **15.6 using thisArg** */
 const forEachUsingThisArg = (req, res) => {
     class Counter {
         constructor() {
@@ -133,7 +133,7 @@ const forEachUsingThisArg = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.7 an object copy function** */
+/** **15.7 an object copy function** */
 const forEachToCopyObject = (req, res) => {
     const copy = (obj) => {
         const copy = Object.create(Object.getPrototypeOf(obj));
@@ -157,7 +157,7 @@ const forEachToCopyObject = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.8 modifying the array during iteration** */
+/** **15.8 modifying the array during iteration** */
 const forEachToModifyArray = (req, res) => {
     const words = ["one", "two", "three", "four"];
     words.forEach((word) => {
@@ -170,7 +170,7 @@ const forEachToModifyArray = (req, res) => {
     res.status(200).json(words);
 };
 
-/** **4.9 flatten an array** */
+/** **15.9 flatten an array** */
 const forEachToFlattenArray = (req, res) => {
     const flatten = (arr) => {
         const result = [];
@@ -190,7 +190,7 @@ const forEachToFlattenArray = (req, res) => {
     res.status(200).json(output);
 };
 
-/** **4.10 calling forEach() on non-array objects */
+/** **15.10 calling forEach() on non-array objects */
 const forEachOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,

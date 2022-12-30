@@ -4,7 +4,7 @@
     pop()
 */
 
-/** **4.1 desc** */
+/** **27.1 desc** */
 const popDesc = (req, res) => {
     // The pop() method removes the last element from an array and returns that element. This method changes the length of the array.
     
@@ -22,7 +22,7 @@ const popDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 calling pop() on non-array objects** */
+/** **27.2 calling pop() on non-array objects** */
 const popOnNonArrayObjects = (req, res) => {
     const arrayLike = {
         length: 3,
@@ -51,7 +51,7 @@ const popOnNonArrayObjects = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 Using an object in an array-like fashion** */
+/** **27.3 Using an object in an array-like fashion** */
 const popWithObjectInArrayLikeFashion = (req, res) => {
     const collection = {
         length: 0,
@@ -82,7 +82,6 @@ const popWithObjectInArrayLikeFashion = (req, res) => {
 
     res.status(200).json(result);
 };
-
 
 module.exports = {
     popDesc,

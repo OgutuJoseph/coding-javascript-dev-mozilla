@@ -5,7 +5,7 @@
     lastIndexOf(searchElement, fromIndex)
  */
 
-/** **4.1 desc** */
+/** **24.1 desc** */
 const lastIndexOfDesc = (req, res) => {
     // The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
     
@@ -22,7 +22,7 @@ const lastIndexOfDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 using lastIndexOf()** */
+/** **24.2 using lastIndexOf()** */
 const lastIndexOfUses = (req, res) => {
     const numbers = [2, 5, 9, 2];
     const result1 = numbers.lastIndexOf(2); // 3
@@ -44,7 +44,7 @@ const lastIndexOfUses = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 finding all the occurrences of an element**  */
+/** **24.3 finding all the occurrences of an element**  */
 const lastIndexOfAllOccurrences = (req, res) => {
     const indices = [];
     const array = ["a", "b", "a", "c", "a", "d"];
@@ -58,7 +58,7 @@ const lastIndexOfAllOccurrences = (req, res) => {
     res.status(200).json(indices);
 };
 
-/** **4.4 using lastIndexOf() on sparse arrays** */
+/** **24.4 using lastIndexOf() on sparse arrays** */
 const lastIndexOfOnSparseArrays = (req, res) => {
     // You cannot use lastIndexOf() to search for empty slots in sparse arrays.
     const result = [1, , 3].lastIndexOf(undefined); // -1
@@ -66,7 +66,7 @@ const lastIndexOfOnSparseArrays = (req, res) => {
     res.status(200).json(result);
 };  
 
-/** **4.5 calling lastIndexOf() on non-array objects** */
+/** **24.5 calling lastIndexOf() on non-array objects** */
 const lastIndexOfOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,

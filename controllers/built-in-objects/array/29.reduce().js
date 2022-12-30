@@ -24,7 +24,7 @@
     reduce(function (accumulator, currentValue, currentIndex, array) { ... }, initialValue)
 */
 
-/** **4.1 desc** */
+/** **29.1 desc** */
 const reduceDesc = (req, res) => {
     const array1 = [1, 2, 3, 4];
 
@@ -39,7 +39,7 @@ const reduceDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 how reduce() works without an initial value** */
+/** **29.2 how reduce() works without an initial value** */
 const reduceWithoutInitial = (req, res) => {
     const array = [15, 16, 17, 18, 19];
 
@@ -61,7 +61,7 @@ const reduceWithoutInitial = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 how reduce() works with an initial value** */
+/** **29.3 how reduce() works with an initial value** */
 const reduceWithInitial = (req, res) => {
     const testResult = [15, 16, 17, 18, 19].reduce(
         (accumulator, currentValue) => accumulator + currentValue,
@@ -75,7 +75,7 @@ const reduceWithInitial = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.4 sum of values in an object array** */
+/** **29.4 sum of values in an object array** */
 const reduceObjectsInArray = (req, res) => {
     const objects = [
         { x: 1 }, 
@@ -92,7 +92,7 @@ const reduceObjectsInArray = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.5 flatten an array of arrays** */
+/** **29.5 flatten an array of arrays** */
 const reduceFlattenArrayOfArrays = (req, res) => {
     const flattened = [
         [0, 1],
@@ -114,7 +114,7 @@ const reduceFlattenArrayOfArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.6 counting instances of values in an object** */
+/** **29.6 counting instances of values in an object** */
 const reduceCountInstancesOfValues = (req, res) => {
     const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice", "Alice"];
 
@@ -130,7 +130,7 @@ const reduceCountInstancesOfValues = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.7 grouping objects by a property** */
+/** **29.7 grouping objects by a property** */
 const reduceGroupObjectsByProperty = (req, res) => {
     const people = [
         { name: "Alice", age: 21 },
@@ -153,7 +153,7 @@ const reduceGroupObjectsByProperty = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.8 concatenating arrays contained in an array of objects using the spread syntax and initialValue** */
+/** **29.8 concatenating arrays contained in an array of objects using the spread syntax and initialValue** */
 const reduceConcatArraysInArrayOfObjects = (req, res) => {
     // friends - an array of objects where object field "books" is a list of favorite books
     const friends = [
@@ -193,7 +193,7 @@ const reduceConcatArraysInArrayOfObjects = (req, res) => {
 
 };
 
-/**  **4.9 remove duplicate items in an array */
+/**  **29.9 remove duplicate items in an array */
 const reduceRemoveDuplicates = (req, res) => {
     const myArray = ["a", "b", "a", "b", "c", "e", "e", "c", "d", "d", "d", "d"];
 
@@ -216,7 +216,7 @@ const reduceRemoveDuplicates = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.10 replace .filter().map() with .reduce()** */
+/** **29.10 replace .filter().map() with .reduce()** */
 const reduceReplaceFilter_Map = (req, res) => {
     /********geeksforgeeks example********/
     const students = [
@@ -274,7 +274,7 @@ const reduceReplaceFilter_Map = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.11 running promises in sequence** */
+/** **29.11 running promises in sequence** */
 const reduceRunPromisesInSequence = (req, res) => {
     /**
      * Chain a series of promise handlers.
@@ -321,7 +321,7 @@ const reduceRunPromisesInSequence = (req, res) => {
     const result = runPromiseInSequence(promiseArr, 10).then(console.log);
 };
 
-/** **4.12 function composition enabling piping**  */
+/** **29.12 function composition enabling piping**  */
 const reduceEnablingPiping = (req, res) => {
     // Building-blocks to use for composition
     const double = (x) => 2 * x;
@@ -358,7 +358,7 @@ const reduceEnablingPiping = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.13 using reduce() with sparse arrays** */
+/** **29.13 using reduce() with sparse arrays** */
 const reduceWithSparseArrays = (req, res) => {
     const firstResult = [1, 2, , 4].reduce((a, b) => a + b);
     const secondResult = [1, 2, undefined, 4].reduce((a, b) => a + b);    
@@ -371,7 +371,7 @@ const reduceWithSparseArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.14 calling reduce() on non-array objects** */
+/** **29.14 calling reduce() on non-array objects** */
 const reduceOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,

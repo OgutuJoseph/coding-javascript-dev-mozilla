@@ -4,7 +4,7 @@
     Array.isArray(value)
  */
 
-/** **4.1 desc** */
+/** **21.1 desc** */
 const isArrayDesc = (req, res) => {
     //The Array.isArray() static method determines whether the passed value is an Array.
     
