@@ -4,7 +4,7 @@
     reverse()
 */
 
-/** **4.1 desc** */
+/** **31.1 desc** */
 const reverseDesc = (req, res) => {
     // The reverse() method reverses an array in place and returns the reference to the same array, the first array element now becoming the last, and the last array element becoming the first.
     // In other words, elements order in the array will be turned towards the direction opposite to that previously stated.
@@ -29,7 +29,7 @@ const reverseDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 keeping a shallow copy so reverse does not mutate array** */
+/** **31.2 keeping a shallow copy so reverse does not mutate array** */
 const reverseWithoutMutatingArrays = (req, res) => {
     const numbers = [3, 2, 4, 1, 5];
 
@@ -47,7 +47,7 @@ const reverseWithoutMutatingArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.3 using reverse() on sparse arrays** */
+/** **31.3 using reverse() on sparse arrays** */
 const reverseWithSparseArrays = (req, res) => {
     const result1 = [1, , 3].reverse(); // [3, empty, 1]
     const result2 = [1, , 3, 4].reverse(); // [4, 3, empty, 1]
@@ -60,7 +60,7 @@ const reverseWithSparseArrays = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.4 calling reverse() on non-array objects** */
+/** **31.4 calling reverse() on non-array objects** */
 const reverseOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,
@@ -73,7 +73,6 @@ const reverseOnNonArrays = (req, res) => {
 
     res.status(200).json(result);
 };
-
 
 module.exports = {
     reverseDesc,   
