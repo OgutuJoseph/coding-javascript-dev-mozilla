@@ -4,7 +4,7 @@
     shift()
 */
 
-/** **4.1 desc** */
+/** **32.1 desc** */
 const shiftDesc = (req, res) => {
     // The shift() method removes the first element from an array and returns that removed element.
     // This method changes the length of the array.
@@ -24,7 +24,7 @@ const shiftDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 using shift() method in while loop**  */
+/** **32.2 using shift() method in while loop**  */
 const shiftWithWhileLoop = (req, res) => {
     const names = ["Andrew", "Tyrone", "Paul", "Maria", undefined, "Gayatri"];
 
@@ -36,7 +36,7 @@ const shiftWithWhileLoop = (req, res) => {
     res.status(200).json(outputs);
 };
 
-/** **4.3 calling shift() on non-array objects** */
+/** **32.3 calling shift() on non-array objects** */
 const shiftOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,
