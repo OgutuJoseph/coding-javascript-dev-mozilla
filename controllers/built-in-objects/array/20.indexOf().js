@@ -5,7 +5,7 @@
     indexOf(searchElement, fromIndex)
  */
 
-/** **4.1 desc** */
+/** **20.1 desc** */
 const indexOfDesc = (req, res) => {
     // The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
     const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
@@ -26,7 +26,7 @@ const indexOfDesc = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.2 using indexOf()** */
+/** **20.2 using indexOf()** */
 const indexOfUses = (req, res) => {
     const array = [2, 9, 9];
     const array2 = [2, 9, 5, 2, 9];
@@ -57,7 +57,7 @@ const indexOfUses = (req, res) => {
     res.status(200).json(result)
 };
 
-/** **4.3 finding all the occurrences of an element** */
+/** **20.3 finding all the occurrences of an element** */
 const indexOfAllOccurrences = (req, res) => {
     const indices = [];
     const array = ["a", "b", "a", "c", "a", "d"];
@@ -70,7 +70,7 @@ const indexOfAllOccurrences = (req, res) => {
     res.status(200).json(indices);
 };
 
-/** **4.4 finding if an element exists in the array or not and updating the array** */
+/** **20.4 finding if an element exists in the array or not and updating the array** */
 const indexOfCheckIfElementExists = (req, res) => {
     let outputs = []
     function updateVegetablesCollection(veggies, veggie) {
@@ -95,14 +95,14 @@ const indexOfCheckIfElementExists = (req, res) => {
     res.status(200).json(result);
 };
 
-/** **4.5 csing indexOf() on sparse arrays** */
+/** **20.5 csing indexOf() on sparse arrays** */
 const indexOfOnSparseArrays = (req, res) => {
     // You cannot use indexOf() to search for empty slots in sparse arrays.
     const result = [1, , 3].indexOf(undefined); // -1
     res.status(200).json(result);
 };
 
-/** **4.6 calling indexOf() on non-array objects** */
+/** **20.6 calling indexOf() on non-array objects** */
 const indexOfOnNonArrays = (req, res) => {
     const arrayLike = {
         length: 3,
