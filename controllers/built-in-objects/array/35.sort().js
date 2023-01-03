@@ -191,7 +191,7 @@ const sortOnNonArrays = (req, res) => {
     const result = Array.prototype.sort.call(arrayLike); // { '0': 4, '1': 5, length: 3, unrelated: 'foo' }
     
     res.status(200).json(result);
-}
+};
 
 module.exports = {
     sortDesc,
