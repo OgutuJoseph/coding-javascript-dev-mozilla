@@ -33,6 +33,7 @@ const { reverseDesc, reverseWithoutMutatingArrays, reverseWithSparseArrays, reve
 const { shiftDesc, shiftWithWhileLoop, shiftOnNonArrays } = require('../../controllers/built-in-objects/array/32.shift()');
 const { sliceDesc, sliceUses, sliceOnNonArrays, sliceToConvertArrayLikeObjects, sliceWithSparseArrays } = require('../../controllers/built-in-objects/array/33.slice()');
 const { someDesc, someToTestArrayValues, someToTestUsingArrowFuncs, someToCheckIfValueExists, someToConvertToBoolean, someWithSparseArrays, someOnNonArrays } = require('../../controllers/built-in-objects/array/34.some()');
+const { sortDesc } = require('../../controllers/built-in-objects/array/35.sort()');
 
 /** properties */
 router.get('/species', species);
@@ -257,5 +258,7 @@ router.get('/someToCheckIfValueExists', someToCheckIfValueExists);
 router.get('/someToConvertToBoolean', someToConvertToBoolean);
 router.get('/someWithSparseArrays', someWithSparseArrays);
 router.get('/someOnNonArrays', someOnNonArrays);
+/** sort() */
+router.get('/sortDesc', sortDesc);
 
 module.exports = router;
