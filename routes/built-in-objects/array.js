@@ -33,7 +33,7 @@ const { reverseDesc, reverseWithoutMutatingArrays, reverseWithSparseArrays, reve
 const { shiftDesc, shiftWithWhileLoop, shiftOnNonArrays } = require('../../controllers/built-in-objects/array/32.shift()');
 const { sliceDesc, sliceUses, sliceOnNonArrays, sliceToConvertArrayLikeObjects, sliceWithSparseArrays } = require('../../controllers/built-in-objects/array/33.slice()');
 const { someDesc, someToTestArrayValues, someToTestUsingArrowFuncs, someToCheckIfValueExists, someToConvertToBoolean, someWithSparseArrays, someOnNonArrays } = require('../../controllers/built-in-objects/array/34.some()');
-const { sortDesc } = require('../../controllers/built-in-objects/array/35.sort()');
+const { sortDesc, sortWithCompareFn, sortArrayOfObjects, sortNonASCII, sortWithMap, sortWithSparseArrays, sortOnNonArrays } = require('../../controllers/built-in-objects/array/35.sort()');
 
 /** properties */
 router.get('/species', species);
@@ -260,5 +260,11 @@ router.get('/someWithSparseArrays', someWithSparseArrays);
 router.get('/someOnNonArrays', someOnNonArrays);
 /** sort() */
 router.get('/sortDesc', sortDesc);
+router.get('/sortWithCompareFn',sortWithCompareFn);
+router.get('/sortArrayOfObjects', sortArrayOfObjects);
+router.get('/sortNonASCII', sortNonASCII);
+router.get('/sortWithMap', sortWithMap);
+router.get('/sortWithSparseArrays', sortWithSparseArrays);
+router.get('/sortOnNonArrays', sortOnNonArrays);
 
 module.exports = router;
