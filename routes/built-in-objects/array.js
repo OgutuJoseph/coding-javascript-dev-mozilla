@@ -34,6 +34,7 @@ const { shiftDesc, shiftWithWhileLoop, shiftOnNonArrays } = require('../../contr
 const { sliceDesc, sliceUses, sliceOnNonArrays, sliceToConvertArrayLikeObjects, sliceWithSparseArrays } = require('../../controllers/built-in-objects/array/33.slice()');
 const { someDesc, someToTestArrayValues, someToTestUsingArrowFuncs, someToCheckIfValueExists, someToConvertToBoolean, someWithSparseArrays, someOnNonArrays } = require('../../controllers/built-in-objects/array/34.some()');
 const { sortDesc, sortWithCompareFn, sortArrayOfObjects, sortNonASCII, sortWithMap, sortWithSparseArrays, sortOnNonArrays } = require('../../controllers/built-in-objects/array/35.sort()');
+const { spliceDesc, spliceRemoveNonInsertNew, splliceRemoveElements, spliceRemoveReplace, spliceWithSparseArrays, spliceOnNonArrays } = require('../../controllers/built-in-objects/array/36.splice()');
 
 /** properties */
 router.get('/species', species);
@@ -266,5 +267,12 @@ router.get('/sortNonASCII', sortNonASCII);
 router.get('/sortWithMap', sortWithMap);
 router.get('/sortWithSparseArrays', sortWithSparseArrays);
 router.get('/sortOnNonArrays', sortOnNonArrays);
+/** splice() */
+router.get('/spliceDesc', spliceDesc);
+router.get('/spliceRemoveNoNInsertNew', spliceRemoveNonInsertNew);
+router.get('/splliceRemoveElements', splliceRemoveElements);
+router.get('/spliceRemoveReplace', spliceRemoveReplace);
+router.get('/spliceWithSparseArrays', spliceWithSparseArrays);
+router.get('/spliceOnNonArrays', spliceOnNonArrays);
 
 module.exports = router;
