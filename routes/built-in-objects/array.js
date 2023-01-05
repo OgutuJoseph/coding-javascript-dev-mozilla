@@ -36,6 +36,7 @@ const { someDesc, someToTestArrayValues, someToTestUsingArrowFuncs, someToCheckI
 const { sortDesc, sortWithCompareFn, sortArrayOfObjects, sortNonASCII, sortWithMap, sortWithSparseArrays, sortOnNonArrays } = require('../../controllers/built-in-objects/array/35.sort()');
 const { spliceDesc, spliceRemoveNonInsertNew, splliceRemoveElements, spliceRemoveReplace, spliceWithSparseArrays, spliceOnNonArrays } = require('../../controllers/built-in-objects/array/36.splice()');
 const { toLocaleStringDesc, toLocaleStringWithOptions, toLocaleStringWithSparseArrays, toLocaleStringOnNonArrays } = require('../../controllers/built-in-objects/array/37.toLocaleString()');
+const { toStringDesc, toStringWithSparseArrays, toStringOnNonArrays } = require('../../controllers/built-in-objects/array/38.toString()');
 
 /** properties */
 router.get('/species', species);
@@ -279,6 +280,10 @@ router.get('/spliceOnNonArrays', spliceOnNonArrays);
 router.get('/toLocaleStringDesc', toLocaleStringDesc);
 router.get('/toLocaleStringWithOptions', toLocaleStringWithOptions);
 router.get('/toLocaleStringWithSparseArrays', toLocaleStringWithSparseArrays);
-router.get('/toLocaleStringOnNonArrays', toLocaleStringOnNonArrays)
+router.get('/toLocaleStringOnNonArrays', toLocaleStringOnNonArrays);
+/** toString() */
+router.get('/toStringDesc', toStringDesc);
+router.get('/toStringWithSparseArrays', toStringWithSparseArrays);
+router.get('/toStringOnNonArrays', toStringOnNonArrays);
 
 module.exports = router;
