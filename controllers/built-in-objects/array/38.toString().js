@@ -1,4 +1,4 @@
-/** ********** array methods - 38. toLocaleString() ********** */
+/** ********** array methods - 38. toString() ********** */
 /**
     Syntax
     toString()
@@ -40,7 +40,7 @@ const toStringOnNonArrays = (req, res) => {
     // res.status(200).json(result);
 
     console.log(Array.prototype.toString.call(arrayLike));
-}
+};
 
 module.exports = {
     toStringDesc,

@@ -37,6 +37,7 @@ const { sortDesc, sortWithCompareFn, sortArrayOfObjects, sortNonASCII, sortWithM
 const { spliceDesc, spliceRemoveNonInsertNew, splliceRemoveElements, spliceRemoveReplace, spliceWithSparseArrays, spliceOnNonArrays } = require('../../controllers/built-in-objects/array/36.splice()');
 const { toLocaleStringDesc, toLocaleStringWithOptions, toLocaleStringWithSparseArrays, toLocaleStringOnNonArrays } = require('../../controllers/built-in-objects/array/37.toLocaleString()');
 const { toStringDesc, toStringWithSparseArrays, toStringOnNonArrays } = require('../../controllers/built-in-objects/array/38.toString()');
+const { unshiftDesc, unshiftOnNonArrays } = require('../../controllers/built-in-objects/array/39.unshift()');
 
 /** properties */
 router.get('/species', species);
@@ -285,5 +286,8 @@ router.get('/toLocaleStringOnNonArrays', toLocaleStringOnNonArrays);
 router.get('/toStringDesc', toStringDesc);
 router.get('/toStringWithSparseArrays', toStringWithSparseArrays);
 router.get('/toStringOnNonArrays', toStringOnNonArrays);
+/** unshift */
+router.get('/unshiftDesc', unshiftDesc);
+router.get('/unshiftOnNonArrays', unshiftOnNonArrays);
 
 module.exports = router;
