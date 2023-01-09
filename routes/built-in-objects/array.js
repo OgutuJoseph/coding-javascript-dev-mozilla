@@ -38,7 +38,7 @@ const { spliceDesc, spliceRemoveNonInsertNew, splliceRemoveElements, spliceRemov
 const { toLocaleStringDesc, toLocaleStringWithOptions, toLocaleStringWithSparseArrays, toLocaleStringOnNonArrays } = require('../../controllers/built-in-objects/array/37.toLocaleString()');
 const { toStringDesc, toStringWithSparseArrays, toStringOnNonArrays } = require('../../controllers/built-in-objects/array/38.toString()');
 const { unshiftDesc, unshiftOnNonArrays } = require('../../controllers/built-in-objects/array/39.unshift()');
-const { valuesDesc } = require('../../controllers/built-in-objects/array/40.values()');
+const { valuesDesc, valuesIterationUsingFor_Of_Loop, valuesIterationUsingNext, valuesWithSparseArrays, valuesOnNonArrays } = require('../../controllers/built-in-objects/array/40.values()');
 
 /** properties */
 router.get('/species', species);
@@ -292,5 +292,9 @@ router.get('/unshiftDesc', unshiftDesc);
 router.get('/unshiftOnNonArrays', unshiftOnNonArrays);
 /** values() */
 router.get('/valuesDesc', valuesDesc);
+router.get('/valuesIterationUsingFor_Of_Loop', valuesIterationUsingFor_Of_Loop);
+router.get('/valuesIterationUsingNext', valuesIterationUsingNext);
+router.get('/valuesWithSparseArrays', valuesWithSparseArrays);
+router.get('/valuesOnNonArrays', valuesOnNonArrays);
 
 module.exports = router;
